@@ -37,8 +37,128 @@
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body id="top">
-  <!-- Dynamic Common Header (loaded by /js/common.js) -->
-  <div id="header-placeholder"></div>
+  <!-- Dynamic Common Header -->
+  <div id="header-placeholder"><!-- MultiTools Pro Header Component -->
+<header class="sticky-top bg-body border-bottom shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-body py-2">
+    <div class="container-xl">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="/index.html" id="nav-brand-link">
+        <span class="brand-icon">
+          <i class="bi bi-tools"></i>
+        </span>
+        <span class="fw-bold fs-5 text-primary">MultiTools<span class="text-body">Pro</span></span>
+      </a>
+
+      <!-- Mobile Toggle Buttons -->
+      <div class="d-flex align-items-center d-lg-none gap-2">
+        <button class="btn btn-sm btn-outline-secondary rounded-circle" id="mobile-theme-btn" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars" id="mobile-theme-icon"></i>
+        </button>
+        <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#globalSearchModal" aria-label="Search tools">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/index.html">
+              <i class="bi bi-house-door me-1"></i> Home
+            </a>
+          </li>
+
+          <!-- Categories Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap me-1"></i> Categories
+            </a>
+            <ul class="dropdown-menu shadow-lg border-0 rounded-3 p-2" id="header-categories-list">
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#image-tools"><i class="bi bi-image text-primary me-2"></i>Image Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#seo-tools"><i class="bi bi-search text-success me-2"></i>SEO Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#text-tools"><i class="bi bi-textarea-t text-purple me-2" style="color:#8b5cf6;"></i>Text Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#developer-tools"><i class="bi bi-code-square text-warning me-2"></i>Developer Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#math-calculators"><i class="bi bi-calculator text-danger me-2"></i>Math & Calculators</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#unit-converters"><i class="bi bi-arrow-left-right text-info me-2"></i>Unit Converters</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#security-encryption"><i class="bi bi-shield-lock text-danger me-2"></i>Security & Encryption</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#social-media-tools"><i class="bi bi-share text-orange me-2" style="color:#f97316;"></i>Social Media Tools</a></li>
+            </ul>
+          </li>
+
+          <!-- Favorites Quick Link -->
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/index.html?filter=favorites" id="header-favorites-link">
+              <i class="bi bi-star-fill text-warning me-1"></i> Favorites
+              <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill ms-1" id="header-fav-count">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Action Items: Search Bar & Theme Switcher -->
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <!-- Search Bar Trigger Button -->
+          <button class="btn btn-light border d-flex align-items-center justify-content-between px-3 py-1 rounded-pill text-muted shadow-sm" style="width: 240px;" data-bs-toggle="modal" data-bs-target="#globalSearchModal" id="btn-desktop-search">
+            <span><i class="bi bi-search me-2"></i>Search 86+ tools...</span>
+            <span class="badge bg-secondary-subtle text-secondary-emphasis font-monospace px-1">Ctrl K</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="btn btn-outline-secondary rounded-circle" id="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars" id="theme-toggle-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Leaderboard Ad Space (Google AdSense 728x90 Banner) -->
+  <div class="bg-body-tertiary border-top py-2 d-none d-md-block" id="header-ad-banner">
+    <div class="container-xl text-center">
+      <div class="ad-slot-container ad-leaderboard mx-auto py-1 px-3 my-0">
+        <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+          <span class="ad-label text-uppercase small text-muted">Sponsored Advertisement</span>
+          <a href="#" class="text-muted text-decoration-none small" style="font-size: 0.65rem;" onclick="event.preventDefault(); document.getElementById('header-ad-banner').style.display='none';">Dismiss</a>
+        </div>
+        <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="ad-banner-content text-decoration-none w-100">
+          <div class="d-flex align-items-center justify-content-center gap-3 py-1">
+            <span class="badge bg-primary px-2 py-1"><i class="bi bi-cloud-check me-1"></i> Cloud Hosting</span>
+            <span class="fw-semibold text-body small">Deploy high-performance web applications with automated scaling & security.</span>
+            <span class="btn btn-sm btn-primary rounded-pill px-3 py-1 ms-2" style="font-size: 0.75rem;">Get Started Free <i class="bi bi-arrow-right ms-1"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Global Search Modal (Available on every page via Ctrl+K or search button) -->
+<div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 border-0 shadow-lg">
+      <div class="modal-header border-bottom-0 pb-0">
+        <div class="position-relative w-100">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 fs-5 text-muted"></i>
+          <input type="text" class="form-control form-control-lg ps-5 pe-5 rounded-pill border-2" id="globalModalSearchInput" placeholder="Search by tool name, category, or keyword..." autocomplete="off">
+          <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body pt-3 pb-4">
+        <div class="d-flex justify-content-between align-items-center px-2 mb-2">
+          <span class="small text-muted fw-semibold text-uppercase" id="globalSearchResultsCount">Recommended Tools</span>
+          <span class="small text-muted">Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>Enter</kbd> to select</span>
+        </div>
+        <div class="list-group list-group-flush overflow-auto" id="globalSearchResultsList" style="max-height: 380px;">
+          <!-- Search results populated dynamically by common.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
   <!-- Hero Section with Search & Stats -->
   <section class="py-5 text-center bg-body border-bottom position-relative overflow-hidden">
@@ -128,7 +248,7 @@
         </div>
       </div>
 
-      <!-- Recently Visited Tools Section (Appears if user has history) -->
+      <!-- Recently Visited Tools Section -->
       <section id="recentSection" class="mb-5 d-none">
         <div class="category-header">
           <h2 class="category-title h5 mb-0">
@@ -138,14 +258,2687 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" id="recentGrid"></div>
       </section>
 
-      <!-- All Categories Grids Container (Rendered dynamically by /js/home.js) -->
+      <!-- All Categories Grids Container (Pre-rendered for zero loading delay) -->
       <div id="categoriesGridContainer">
-        <div class="text-center py-5 text-muted">
-          <div class="spinner-border text-primary mb-3" role="status">
-            <span class="visually-hidden">Loading tools...</span>
-          </div>
-          <div>Loading tools catalog...</div>
+        
+    <section class="category-section" id="image-tools">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-image text-primary me-2"></i>
+          Image Tools
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">14</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/image-to-png.html" class="tool-card shadow-sm" id="card-image-to-png">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-to-png" 
+                onclick="toggleFavorite('image-to-png', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-png"></i>
         </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image to PNG Converter</h3>
+        <p class="tool-card-desc">Convert any image (JPG, WebP, GIF, BMP) to high-quality lossless PNG format instantly.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-to-jpg.html" class="tool-card shadow-sm" id="card-image-to-jpg">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-to-jpg" 
+                onclick="toggleFavorite('image-to-jpg', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-jpg"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image to JPG Converter</h3>
+        <p class="tool-card-desc">Convert PNG, WebP or other image formats into optimized JPEG/JPG with custom quality control.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-resizer.html" class="tool-card shadow-sm" id="card-image-resizer">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-resizer" 
+                onclick="toggleFavorite('image-resizer', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-arrows-angle-expand"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Utility</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Resizer</h3>
+        <p class="tool-card-desc">Resize image dimensions by pixels or percentage while preserving aspect ratio.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-compressor.html" class="tool-card shadow-sm" id="card-image-compressor">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-compressor" 
+                onclick="toggleFavorite('image-compressor', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-zip"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Essential</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Compressor</h3>
+        <p class="tool-card-desc">Reduce image file size significantly without visible quality loss right in your browser.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-cropper.html" class="tool-card shadow-sm" id="card-image-cropper">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-cropper" 
+                onclick="toggleFavorite('image-cropper', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-crop"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Visual</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Cropper</h3>
+        <p class="tool-card-desc">Crop photos and graphics with standard aspect ratio presets (1:1, 16:9, 4:3) or freeform.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-to-base64.html" class="tool-card shadow-sm" id="card-image-to-base64">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-to-base64" 
+                onclick="toggleFavorite('image-to-base64', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Dev</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Convert Image to Base64</h3>
+        <p class="tool-card-desc">Turn pictures into Base64 data URI strings for embedding directly in HTML or CSS.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/webp-to-png.html" class="tool-card shadow-sm" id="card-webp-to-png">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="webp-to-png" 
+                onclick="toggleFavorite('webp-to-png', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-arrow-left-right"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Convert WebP to PNG</h3>
+        <p class="tool-card-desc">Transform Google WebP files into universal transparent PNGs without loss of detail.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/gif-maker.html" class="tool-card shadow-sm" id="card-gif-maker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="gif-maker" 
+                onclick="toggleFavorite('gif-maker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-gif"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Creative</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">GIF Maker & Animator</h3>
+        <p class="tool-card-desc">Combine multiple photos into an animated GIF loop with customizable frame speed.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/qr-code-generator.html" class="tool-card shadow-sm" id="card-qr-code-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="qr-code-generator" 
+                onclick="toggleFavorite('qr-code-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-qr-code"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-success-subtle text-success-emphasis tool-badge">Must Have</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">QR Code Generator</h3>
+        <p class="tool-card-desc">Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/screenshot-to-pdf.html" class="tool-card shadow-sm" id="card-screenshot-to-pdf">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="screenshot-to-pdf" 
+                onclick="toggleFavorite('screenshot-to-pdf', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-pdf"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Office</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Screenshot to PDF Converter</h3>
+        <p class="tool-card-desc">Convert captured screenshots or photo documents into clean printable PDF files.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/color-extractor.html" class="tool-card shadow-sm" id="card-color-extractor">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="color-extractor" 
+                onclick="toggleFavorite('color-extractor', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-palette"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Design</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Color Palette Extractor</h3>
+        <p class="tool-card-desc">Extract the dominant colors and generate color swatches (HEX, RGB) from any uploaded photo.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/svg-to-png.html" class="tool-card shadow-sm" id="card-svg-to-png">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="svg-to-png" 
+                onclick="toggleFavorite('svg-to-png', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-svg"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Vector</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">SVG to PNG Converter</h3>
+        <p class="tool-card-desc">Rasterize vector SVG files into crisp PNG bitmaps at 1x, 2x, or 4x high-resolution scales.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-color-inverter.html" class="tool-card shadow-sm" id="card-image-color-inverter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-color-inverter" 
+                onclick="toggleFavorite('image-color-inverter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-circle-half"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Filter</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Color Inverter</h3>
+        <p class="tool-card-desc">Invert all colors in photos or graphics to create a negative film effect in real-time.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/image-flipper.html" class="tool-card shadow-sm" id="card-image-flipper">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="image-flipper" 
+                onclick="toggleFavorite('image-flipper', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-symmetry-vertical"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Visual</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Image Tools</span>
+        </div>
+        <h3 class="tool-card-title">Image Flipper & Mirror</h3>
+        <p class="tool-card-desc">Flip pictures horizontally or vertically to mirror photos without quality loss.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="seo-tools">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-search text-primary me-2"></i>
+          SEO Tools
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">10</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/meta-tag-generator.html" class="tool-card shadow-sm" id="card-meta-tag-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="meta-tag-generator" 
+                onclick="toggleFavorite('meta-tag-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-tags"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-warning-subtle text-warning-emphasis tool-badge">SEO</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Meta Tag Generator</h3>
+        <p class="tool-card-desc">Create search-engine friendly title, description, OpenGraph, and Twitter card meta tags.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/keyword-density-checker.html" class="tool-card shadow-sm" id="card-keyword-density-checker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="keyword-density-checker" 
+                onclick="toggleFavorite('keyword-density-checker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-bar-chart"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-warning-subtle text-warning-emphasis tool-badge">SEO</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Keyword Density Checker</h3>
+        <p class="tool-card-desc">Analyze keyword frequency and density percentages for 1-word, 2-word, and 3-word phrases.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/sitemap-generator.html" class="tool-card shadow-sm" id="card-sitemap-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="sitemap-generator" 
+                onclick="toggleFavorite('sitemap-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-diagram-3"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Webmaster</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">XML Sitemap Generator</h3>
+        <p class="tool-card-desc">Generate compliant XML sitemaps with priority, change frequency, and last-modified dates.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/robots-txt-generator.html" class="tool-card shadow-sm" id="card-robots-txt-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="robots-txt-generator" 
+                onclick="toggleFavorite('robots-txt-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-robot"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Webmaster</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Robots.txt Generator</h3>
+        <p class="tool-card-desc">Build clean robots.txt files with customized crawl instructions for Googlebot, Bing, and other crawlers.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/xml-sitemap-validator.html" class="tool-card shadow-sm" id="card-xml-sitemap-validator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="xml-sitemap-validator" 
+                onclick="toggleFavorite('xml-sitemap-validator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-check2-circle"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Validator</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">XML Sitemap Validator</h3>
+        <p class="tool-card-desc">Validate the XML syntax and structure of your sitemap to avoid crawling penalties.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/mobile-friendly-test.html" class="tool-card shadow-sm" id="card-mobile-friendly-test">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="mobile-friendly-test" 
+                onclick="toggleFavorite('mobile-friendly-test', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-phone"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Testing</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Mobile-Friendly Viewport Test</h3>
+        <p class="tool-card-desc">Inspect how any webpage or HTML snippet renders across mobile, tablet, and desktop viewports.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/open-graph-preview.html" class="tool-card shadow-sm" id="card-open-graph-preview">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="open-graph-preview" 
+                onclick="toggleFavorite('open-graph-preview', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-share"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Social SEO</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Open Graph Social Preview</h3>
+        <p class="tool-card-desc">Preview how your links appear when shared on Google, Facebook, Twitter, and LinkedIn.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/schema-markup-generator.html" class="tool-card shadow-sm" id="card-schema-markup-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="schema-markup-generator" 
+                onclick="toggleFavorite('schema-markup-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-earmark-code"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Rich Snippets</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Schema Markup (JSON-LD) Generator</h3>
+        <p class="tool-card-desc">Generate Google rich-result JSON-LD structured data for WebApps, Articles, FAQs, and Products.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/http-status-checker.html" class="tool-card shadow-sm" id="card-http-status-checker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="http-status-checker" 
+                onclick="toggleFavorite('http-status-checker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-hdd-network"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Webmaster</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">HTTP Status Code Guide</h3>
+        <p class="tool-card-desc">Interactive directory and debugger for HTTP response codes (200, 301, 302, 400, 404, 500, 503).</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/canonical-tag-generator.html" class="tool-card shadow-sm" id="card-canonical-tag-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="canonical-tag-generator" 
+                onclick="toggleFavorite('canonical-tag-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-link"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-warning-subtle text-warning-emphasis tool-badge">SEO</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">SEO Tools</span>
+        </div>
+        <h3 class="tool-card-title">Canonical Tag Generator</h3>
+        <p class="tool-card-desc">Generate self-referencing and cross-domain rel=canonical tags to avoid SEO duplicate content.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="text-tools">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-textarea-t text-primary me-2"></i>
+          Text Tools
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">15</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/word-counter.html" class="tool-card shadow-sm" id="card-word-counter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="word-counter" 
+                onclick="toggleFavorite('word-counter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-card-text"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Word Counter</h3>
+        <p class="tool-card-desc">Real-time word, character, sentence, paragraph counter with estimated reading and speaking time.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/character-counter.html" class="tool-card shadow-sm" id="card-character-counter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="character-counter" 
+                onclick="toggleFavorite('character-counter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-123"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Utility</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Character Counter & Analyzer</h3>
+        <p class="tool-card-desc">Detailed character breakdown counting letters, digits, whitespace, punctuation, and byte size.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/case-converter.html" class="tool-card shadow-sm" id="card-case-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="case-converter" 
+                onclick="toggleFavorite('case-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-type"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Essential</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Case Converter</h3>
+        <p class="tool-card-desc">Convert text into UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/grammar-checker.html" class="tool-card shadow-sm" id="card-grammar-checker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="grammar-checker" 
+                onclick="toggleFavorite('grammar-checker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-spellcheck"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Writing</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Grammar & Spelling Checker</h3>
+        <p class="tool-card-desc">Instant proofreading tool detecting repeated words, double spaces, passive voice, and common typos.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/text-to-speech.html" class="tool-card shadow-sm" id="card-text-to-speech">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="text-to-speech" 
+                onclick="toggleFavorite('text-to-speech', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-volume-up"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Audio</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Text-to-Speech (TTS)</h3>
+        <p class="tool-card-desc">Listen to any text converted to natural spoken audio using browser speech synthesis voices.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/speech-to-text.html" class="tool-card shadow-sm" id="card-speech-to-text">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="speech-to-text" 
+                onclick="toggleFavorite('speech-to-text', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-mic"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Voice</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Speech-to-Text Dictation</h3>
+        <p class="tool-card-desc">Transcribe spoken voice directly into written text in real time using microphone recognition.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/url-encoder-decoder.html" class="tool-card shadow-sm" id="card-url-encoder-decoder">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="url-encoder-decoder" 
+                onclick="toggleFavorite('url-encoder-decoder', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-link-45deg"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Dev & Web</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">URL Encoder & Decoder</h3>
+        <p class="tool-card-desc">Encode special characters into percent-encoded query parameters or decode URLs back to raw strings.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/fancy-text-generator.html" class="tool-card shadow-sm" id="card-fancy-text-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="fancy-text-generator" 
+                onclick="toggleFavorite('fancy-text-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-magic"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Fun</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Fancy Text Generator</h3>
+        <p class="tool-card-desc">Transform regular text into fancy unicode styles (cursive, bold, gothic, bubble, small caps) for bio/posts.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/random-text-generator.html" class="tool-card shadow-sm" id="card-random-text-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="random-text-generator" 
+                onclick="toggleFavorite('random-text-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-blockquote-left"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Design</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Random Text / Lorem Ipsum</h3>
+        <p class="tool-card-desc">Generate dummy placeholder text, Lorem Ipsum paragraphs, sentences, and lists for design mockups.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/duplicate-line-remover.html" class="tool-card shadow-sm" id="card-duplicate-line-remover">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="duplicate-line-remover" 
+                onclick="toggleFavorite('duplicate-line-remover', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filter"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Utility</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Duplicate Line Remover</h3>
+        <p class="tool-card-desc">Remove duplicate lines from text lists, sort alphabetically, and trim excess whitespace.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/text-diff-checker.html" class="tool-card shadow-sm" id="card-text-diff-checker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="text-diff-checker" 
+                onclick="toggleFavorite('text-diff-checker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-intersect"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Comparison</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Text Diff Checker</h3>
+        <p class="tool-card-desc">Compare two blocks of text side-by-side to visually highlight additions, removals, and modifications.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/find-and-replace.html" class="tool-card shadow-sm" id="card-find-and-replace">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="find-and-replace" 
+                onclick="toggleFavorite('find-and-replace', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-search"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Editor</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Find and Replace Utility</h3>
+        <p class="tool-card-desc">Search and batch-replace words or patterns with full support for case matching and Regular Expressions.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/slug-generator.html" class="tool-card shadow-sm" id="card-slug-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="slug-generator" 
+                onclick="toggleFavorite('slug-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-link-45deg"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-warning-subtle text-warning-emphasis tool-badge">SEO</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">URL Slug Generator</h3>
+        <p class="tool-card-desc">Convert blog titles and headlines into clean, URL-friendly, SEO-optimized kebab-case slugs.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/text-to-binary.html" class="tool-card shadow-sm" id="card-text-to-binary">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="text-to-binary" 
+                onclick="toggleFavorite('text-to-binary', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-binary"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Binary</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Text to Binary Converter</h3>
+        <p class="tool-card-desc">Convert plain text characters to 8-bit binary codes (01100001) and decode binary back to ASCII.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/lorem-markdown-generator.html" class="tool-card shadow-sm" id="card-lorem-markdown-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="lorem-markdown-generator" 
+                onclick="toggleFavorite('lorem-markdown-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-markdown"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Docs</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Text Tools</span>
+        </div>
+        <h3 class="tool-card-title">Lorem Markdown Generator</h3>
+        <p class="tool-card-desc">Generate structured dummy Markdown documents with headings, lists, tables, and blockquotes.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+      <div class="ad-slot-container ad-incontent my-4">
+        <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+          <span class="ad-label text-uppercase small text-muted">Sponsored • Google AdSense</span>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">Recommended</span>
+        </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-between w-100 p-2 text-start">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-speedometer2 text-primary fs-2"></i>
+            <div>
+              <div class="fw-bold text-body small">Next-Gen Cloud Database & Storage</div>
+              <div class="text-muted small" style="font-size: 0.78rem;">Ultra-low latency serverless database with instant global replication.</div>
+            </div>
+          </div>
+          <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-3 mt-2 mt-sm-0">Get Started Free</a>
+        </div>
+      </div>
+    
+  
+    <section class="category-section" id="developer-tools">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-code-square text-primary me-2"></i>
+          Developer Tools
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">17</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/json-formatter.html" class="tool-card shadow-sm" id="card-json-formatter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="json-formatter" 
+                onclick="toggleFavorite('json-formatter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-earmark-code"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-success-subtle text-success-emphasis tool-badge">Must Have</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">JSON Formatter & Validator</h3>
+        <p class="tool-card-desc">Prettify, format, validate, and minify JSON data with exact line and column syntax error detection.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/html-to-markdown.html" class="tool-card shadow-sm" id="card-html-to-markdown">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="html-to-markdown" 
+                onclick="toggleFavorite('html-to-markdown', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-markdown"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Converter</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">HTML to Markdown Converter</h3>
+        <p class="tool-card-desc">Convert HTML markup into clean GitHub-flavored Markdown text with links, tables, and code formatting.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/markdown-to-html.html" class="tool-card shadow-sm" id="card-markdown-to-html">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="markdown-to-html" 
+                onclick="toggleFavorite('markdown-to-html', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-text"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Converter</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">Markdown to HTML Converter</h3>
+        <p class="tool-card-desc">Compile Markdown text into clean semantic HTML markup with real-time preview and export.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/css-minifier.html" class="tool-card shadow-sm" id="card-css-minifier">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="css-minifier" 
+                onclick="toggleFavorite('css-minifier', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-css"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Speed</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">CSS Minifier & Beautifier</h3>
+        <p class="tool-card-desc">Compress CSS stylesheets by stripping unnecessary whitespaces and comments to speed up page load.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/javascript-minifier.html" class="tool-card shadow-sm" id="card-javascript-minifier">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="javascript-minifier" 
+                onclick="toggleFavorite('javascript-minifier', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-js"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Speed</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">JavaScript Minifier & Formatter</h3>
+        <p class="tool-card-desc">Minify JS code to reduce payload size or beautify tangled scripts with proper indentation.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/sql-formatter.html" class="tool-card shadow-sm" id="card-sql-formatter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="sql-formatter" 
+                onclick="toggleFavorite('sql-formatter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-database"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Database</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">SQL Formatter & Beautifier</h3>
+        <p class="tool-card-desc">Format raw database queries with indented keywords (SELECT, FROM, WHERE, JOIN, GROUP BY).</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/htaccess-redirect-generator.html" class="tool-card shadow-sm" id="card-htaccess-redirect-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="htaccess-redirect-generator" 
+                onclick="toggleFavorite('htaccess-redirect-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-server"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">DevOps</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">HTACCESS Redirect Generator</h3>
+        <p class="tool-card-desc">Generate Apache .htaccess rules for 301 redirects, HTTPS enforcement, www redirects, and hotlink protection.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/color-code-picker.html" class="tool-card shadow-sm" id="card-color-code-picker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="color-code-picker" 
+                onclick="toggleFavorite('color-code-picker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-eyedropper"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Design</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">Color Code Picker & Converter</h3>
+        <p class="tool-card-desc">Pick colors and instantly convert between HEX, RGB, HSL, HSV, and CMYK formats with shades generator.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/base64-encoder-decoder.html" class="tool-card shadow-sm" id="card-base64-encoder-decoder">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="base64-encoder-decoder" 
+                onclick="toggleFavorite('base64-encoder-decoder', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Encoding</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">Base64 Encoder & Decoder</h3>
+        <p class="tool-card-desc">Encode plain text to Base64 or decode Base64 strings back to UTF-8 text safely.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/uuid-generator.html" class="tool-card shadow-sm" id="card-uuid-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="uuid-generator" 
+                onclick="toggleFavorite('uuid-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-fingerprint"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Identity</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">UUID / GUID v4 Generator</h3>
+        <p class="tool-card-desc">Generate cryptographically secure random UUID v4 / GUID identifiers individually or in bulk.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/jwt-decoder.html" class="tool-card shadow-sm" id="card-jwt-decoder">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="jwt-decoder" 
+                onclick="toggleFavorite('jwt-decoder', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-key"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Security</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">JWT Token Decoder</h3>
+        <p class="tool-card-desc">Inspect and decode JSON Web Tokens (Header, Payload, Claims) safely in the client browser.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/regex-tester.html" class="tool-card shadow-sm" id="card-regex-tester">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="regex-tester" 
+                onclick="toggleFavorite('regex-tester', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-regex"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Dev</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">Regular Expression Tester</h3>
+        <p class="tool-card-desc">Test RegEx patterns against text strings with real-time match highlighting and capture group details.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/timestamp-converter.html" class="tool-card shadow-sm" id="card-timestamp-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="timestamp-converter" 
+                onclick="toggleFavorite('timestamp-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-clock-history"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Time</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">Unix Timestamp Converter</h3>
+        <p class="tool-card-desc">Convert Unix epoch timestamps (seconds/milliseconds) to human-readable dates and vice versa.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/xml-formatter.html" class="tool-card shadow-sm" id="card-xml-formatter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="xml-formatter" 
+                onclick="toggleFavorite('xml-formatter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-xml"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">XML</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">XML Formatter & Beautifier</h3>
+        <p class="tool-card-desc">Format, indent, validate, and minify XML data with syntax error detection.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/csv-to-json.html" class="tool-card shadow-sm" id="card-csv-to-json">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="csv-to-json" 
+                onclick="toggleFavorite('csv-to-json', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-filetype-csv"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Data</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">CSV to JSON Converter</h3>
+        <p class="tool-card-desc">Convert comma-separated CSV spreadsheet data into structured JSON arrays and objects.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/json-to-csv.html" class="tool-card shadow-sm" id="card-json-to-csv">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="json-to-csv" 
+                onclick="toggleFavorite('json-to-csv', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-table"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Data</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">JSON to CSV Converter</h3>
+        <p class="tool-card-desc">Convert JSON arrays into flat CSV tabular data ready for Excel or Google Sheets.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/html-entity-encoder.html" class="tool-card shadow-sm" id="card-html-entity-encoder">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="html-entity-encoder" 
+                onclick="toggleFavorite('html-entity-encoder', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-code"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Encoding</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Developer Tools</span>
+        </div>
+        <h3 class="tool-card-title">HTML Entity Encoder & Decoder</h3>
+        <p class="tool-card-desc">Encode reserved characters into HTML character entities (&amp;, &lt;, &gt;) and decode entities back.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="math-calculators">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-calculator text-primary me-2"></i>
+          Math & Calculators
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">15</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/percentage-calculator.html" class="tool-card shadow-sm" id="card-percentage-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="percentage-calculator" 
+                onclick="toggleFavorite('percentage-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-percent"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Percentage Calculator</h3>
+        <p class="tool-card-desc">Calculate percentage discounts, what percent X is of Y, and percentage increase or decrease.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/age-calculator.html" class="tool-card shadow-sm" id="card-age-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="age-calculator" 
+                onclick="toggleFavorite('age-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-calendar-event"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Age Calculator</h3>
+        <p class="tool-card-desc">Compute exact age in years, months, days, total hours, minutes, and count down to next birthday.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/bmi-calculator.html" class="tool-card shadow-sm" id="card-bmi-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="bmi-calculator" 
+                onclick="toggleFavorite('bmi-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-heart-pulse"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Health</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">BMI Calculator</h3>
+        <p class="tool-card-desc">Calculate Body Mass Index (BMI) using metric or imperial units with health classification gauge.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/loan-emi-calculator.html" class="tool-card shadow-sm" id="card-loan-emi-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="loan-emi-calculator" 
+                onclick="toggleFavorite('loan-emi-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-cash-coin"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Finance</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Loan EMI Calculator</h3>
+        <p class="tool-card-desc">Calculate monthly loan EMI payments, total interest payable, and full loan amortization schedule.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/scientific-calculator.html" class="tool-card shadow-sm" id="card-scientific-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="scientific-calculator" 
+                onclick="toggleFavorite('scientific-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-calculator"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Math</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Scientific Calculator</h3>
+        <p class="tool-card-desc">Online calculator with trigonometric functions (sin, cos, tan), log, powers, square roots, and constants.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/discount-calculator.html" class="tool-card shadow-sm" id="card-discount-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="discount-calculator" 
+                onclick="toggleFavorite('discount-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-tag"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Shopping</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Discount & Tax Calculator</h3>
+        <p class="tool-card-desc">Find your final shopping price after promotional discounts and sales tax with savings breakdown.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/currency-converter.html" class="tool-card shadow-sm" id="card-currency-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="currency-converter" 
+                onclick="toggleFavorite('currency-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-currency-exchange"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Finance</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Currency Converter</h3>
+        <p class="tool-card-desc">Convert between major world currencies (USD, EUR, GBP, JPY, CAD, AUD, INR) with live rates.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/time-zone-converter.html" class="tool-card shadow-sm" id="card-time-zone-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="time-zone-converter" 
+                onclick="toggleFavorite('time-zone-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-globe"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">World</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Time Zone Converter</h3>
+        <p class="tool-card-desc">Compare local times across global time zones (UTC, New York, London, Tokyo, Sydney, Dubai).</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/binary-to-decimal.html" class="tool-card shadow-sm" id="card-binary-to-decimal">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="binary-to-decimal" 
+                onclick="toggleFavorite('binary-to-decimal', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-binary"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Math/CS</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Binary to Decimal Converter</h3>
+        <p class="tool-card-desc">Instant bidirectional converter between Binary, Decimal, Hexadecimal, and Octal number systems.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/compound-interest-calculator.html" class="tool-card shadow-sm" id="card-compound-interest-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="compound-interest-calculator" 
+                onclick="toggleFavorite('compound-interest-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Investment</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Compound Interest Calculator</h3>
+        <p class="tool-card-desc">Project investment growth over time with customizable compounding frequencies and contributions.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/tip-calculator.html" class="tool-card shadow-sm" id="card-tip-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="tip-calculator" 
+                onclick="toggleFavorite('tip-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-receipt"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Daily</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Tip & Bill Split Calculator</h3>
+        <p class="tool-card-desc">Quickly calculate restaurant tip percentages and split the total bill evenly among friends.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/gpa-calculator.html" class="tool-card shadow-sm" id="card-gpa-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="gpa-calculator" 
+                onclick="toggleFavorite('gpa-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-mortarboard"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Academic</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">College GPA Calculator</h3>
+        <p class="tool-card-desc">Calculate semester grade point average (GPA) from letter grades and credit hours.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/sales-tax-calculator.html" class="tool-card shadow-sm" id="card-sales-tax-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="sales-tax-calculator" 
+                onclick="toggleFavorite('sales-tax-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-cash-stack"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Finance</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Sales Tax & Gross Calculator</h3>
+        <p class="tool-card-desc">Calculate sales tax amounts, net prices, and total gross costs with custom tax rates.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/fraction-to-decimal.html" class="tool-card shadow-sm" id="card-fraction-to-decimal">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="fraction-to-decimal" 
+                onclick="toggleFavorite('fraction-to-decimal', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-slash-circle"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Math</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Fraction to Decimal Converter</h3>
+        <p class="tool-card-desc">Convert fractions (e.g. 3/4) into decimal numbers (0.75) and percentages with mixed number support.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/aspect-ratio-calculator.html" class="tool-card shadow-sm" id="card-aspect-ratio-calculator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="aspect-ratio-calculator" 
+                onclick="toggleFavorite('aspect-ratio-calculator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-aspect-ratio"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Display</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Math & Calculators</span>
+        </div>
+        <h3 class="tool-card-title">Aspect Ratio Calculator</h3>
+        <p class="tool-card-desc">Calculate proportional display resolutions for 16:9, 4:3, 21:9, and custom video/photo ratios.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="unit-converters">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-arrow-left-right text-primary me-2"></i>
+          Unit Converters
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">12</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/length-converter.html" class="tool-card shadow-sm" id="card-length-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="length-converter" 
+                onclick="toggleFavorite('length-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-rulers"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Units</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Length Converter</h3>
+        <p class="tool-card-desc">Convert distance and length between meters, kilometers, centimeters, feet, inches, miles, and yards.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/weight-converter.html" class="tool-card shadow-sm" id="card-weight-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="weight-converter" 
+                onclick="toggleFavorite('weight-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-speedometer2"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Units</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Weight & Mass Converter</h3>
+        <p class="tool-card-desc">Convert weights between kilograms, grams, milligrams, pounds, ounces, and stones.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/speed-converter.html" class="tool-card shadow-sm" id="card-speed-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="speed-converter" 
+                onclick="toggleFavorite('speed-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-lightning-charge"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Units</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Speed Converter</h3>
+        <p class="tool-card-desc">Convert velocity between kilometers per hour (km/h), miles per hour (mph), m/s, and knots.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/temperature-converter.html" class="tool-card shadow-sm" id="card-temperature-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="temperature-converter" 
+                onclick="toggleFavorite('temperature-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-thermometer-half"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Units</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Temperature Converter</h3>
+        <p class="tool-card-desc">Convert thermal measurements between Celsius, Fahrenheit, Kelvin, and Rankine scales.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/volume-converter.html" class="tool-card shadow-sm" id="card-volume-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="volume-converter" 
+                onclick="toggleFavorite('volume-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-cup-straw"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Units</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Volume Converter</h3>
+        <p class="tool-card-desc">Convert liquid and dry volumes between liters, milliliters, gallons, quarts, pints, and fluid ounces.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/data-storage-converter.html" class="tool-card shadow-sm" id="card-data-storage-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="data-storage-converter" 
+                onclick="toggleFavorite('data-storage-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-hdd"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Tech</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Data Storage Converter</h3>
+        <p class="tool-card-desc">Convert computer memory between Bytes, Kilobytes (KB), Megabytes (MB), Gigabytes (GB), and Terabytes (TB).</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/energy-converter.html" class="tool-card shadow-sm" id="card-energy-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="energy-converter" 
+                onclick="toggleFavorite('energy-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-battery-charging"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Physics</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Energy Converter</h3>
+        <p class="tool-card-desc">Convert work and energy between Joules, Kilojoules, Calories, Kilocalories, Watt-hours, and BTUs.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/pressure-converter.html" class="tool-card shadow-sm" id="card-pressure-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="pressure-converter" 
+                onclick="toggleFavorite('pressure-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-gauge"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Engineering</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Pressure Converter</h3>
+        <p class="tool-card-desc">Convert pressure units between Pascals, Bar, PSI (pounds/sq inch), and standard Atmospheres.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/fuel-efficiency-converter.html" class="tool-card shadow-sm" id="card-fuel-efficiency-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="fuel-efficiency-converter" 
+                onclick="toggleFavorite('fuel-efficiency-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-fuel-pump"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Auto</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Fuel Efficiency Converter</h3>
+        <p class="tool-card-desc">Convert automobile fuel economy between Miles Per Gallon (MPG US / UK), L/100km, and km/L.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/angle-converter.html" class="tool-card shadow-sm" id="card-angle-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="angle-converter" 
+                onclick="toggleFavorite('angle-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-compass"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Math</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Angle Converter</h3>
+        <p class="tool-card-desc">Convert geometric angles between Degrees, Radians, Gradians, Arcminutes, and Arcseconds.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/power-converter.html" class="tool-card shadow-sm" id="card-power-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="power-converter" 
+                onclick="toggleFavorite('power-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-plug"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Physics</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Power Converter</h3>
+        <p class="tool-card-desc">Convert power ratings between Watts, Kilowatts, Metric Horsepower, and BTUs per hour.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/frequency-converter.html" class="tool-card shadow-sm" id="card-frequency-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="frequency-converter" 
+                onclick="toggleFavorite('frequency-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-soundwave"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Wave</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Unit Converters</span>
+        </div>
+        <h3 class="tool-card-title">Frequency Converter</h3>
+        <p class="tool-card-desc">Convert frequency intervals between Hertz (Hz), Kilohertz (kHz), Megahertz (MHz), Gigahertz (GHz), and RPM.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="security-encryption">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-shield-lock text-primary me-2"></i>
+          Security & Encryption
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">9</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/md5-hash-generator.html" class="tool-card shadow-sm" id="card-md5-hash-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="md5-hash-generator" 
+                onclick="toggleFavorite('md5-hash-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-hash"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Crypt</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">MD5 Hash Generator</h3>
+        <p class="tool-card-desc">Generate 128-bit cryptographic MD5 checksum hashes for strings and sensitive verification.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/sha256-hash-generator.html" class="tool-card shadow-sm" id="card-sha256-hash-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="sha256-hash-generator" 
+                onclick="toggleFavorite('sha256-hash-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Crypto</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">SHA-256 Hash Generator</h3>
+        <p class="tool-card-desc">Compute secure SHA-256 and SHA-512 cryptographic digests using native Web Crypto API.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/password-generator.html" class="tool-card shadow-sm" id="card-password-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="password-generator" 
+                onclick="toggleFavorite('password-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-key-fill"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-success-subtle text-success-emphasis tool-badge">Must Have</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Password Generator</h3>
+        <p class="tool-card-desc">Generate strong, high-entropy passwords with custom length, symbols, digits, and strength meter.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/random-string-generator.html" class="tool-card shadow-sm" id="card-random-string-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="random-string-generator" 
+                onclick="toggleFavorite('random-string-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-shuffle"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Utility</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Random String & Token Generator</h3>
+        <p class="tool-card-desc">Generate bulk random alphanumeric strings, API tokens, session keys, and hex strings.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/ssl-certificate-checker.html" class="tool-card shadow-sm" id="card-ssl-certificate-checker">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="ssl-certificate-checker" 
+                onclick="toggleFavorite('ssl-certificate-checker', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-shield-shaded"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Security</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">SSL Certificate & Security Checker</h3>
+        <p class="tool-card-desc">Inspect domain HTTPS status, TLS encryption level, and recommended security header configurations.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/privacy-policy-generator.html" class="tool-card shadow-sm" id="card-privacy-policy-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="privacy-policy-generator" 
+                onclick="toggleFavorite('privacy-policy-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-earmark-lock"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Legal</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Privacy Policy Generator</h3>
+        <p class="tool-card-desc">Generate customized GDPR and CCPA compliant Privacy Policy documents for your website or app.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/terms-of-service-generator.html" class="tool-card shadow-sm" id="card-terms-of-service-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="terms-of-service-generator" 
+                onclick="toggleFavorite('terms-of-service-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-file-earmark-check"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Legal</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Terms of Service Generator</h3>
+        <p class="tool-card-desc">Create standard Terms of Service (ToS) agreement text customized to your company and website.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/morse-code-converter.html" class="tool-card shadow-sm" id="card-morse-code-converter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="morse-code-converter" 
+                onclick="toggleFavorite('morse-code-converter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-broadcast-pin"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Fun & Audio</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Morse Code Translator & Audio</h3>
+        <p class="tool-card-desc">Translate text to Morse code and play sound beeps with Web Audio oscillator synthesis.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/caesar-cipher.html" class="tool-card shadow-sm" id="card-caesar-cipher">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="caesar-cipher" 
+                onclick="toggleFavorite('caesar-cipher', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-arrow-repeat"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Crypto</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Security & Encryption</span>
+        </div>
+        <h3 class="tool-card-title">Caesar Cipher Encoder / Decoder</h3>
+        <p class="tool-card-desc">Encode or crack shift cipher messages with rot-1 to rot-25 rotation slider and brute force solver.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
+    <section class="category-section" id="social-media-tools">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi bi-share text-primary me-2"></i>
+          Social Media Tools
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">9</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        
+    <div class="col">
+      <a href="/tools/youtube-thumbnail-downloader.html" class="tool-card shadow-sm" id="card-youtube-thumbnail-downloader">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="youtube-thumbnail-downloader" 
+                onclick="toggleFavorite('youtube-thumbnail-downloader', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-youtube"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-primary-subtle text-primary-emphasis tool-badge">Popular</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">YouTube Thumbnail Downloader</h3>
+        <p class="tool-card-desc">Extract and download Maximum Resolution (HD 1080p/720p) thumbnails from any YouTube video URL.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/hashtag-generator.html" class="tool-card shadow-sm" id="card-hashtag-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="hashtag-generator" 
+                onclick="toggleFavorite('hashtag-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-hash"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Viral</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Hashtag Generator</h3>
+        <p class="tool-card-desc">Generate viral niche hashtags for Instagram reels, TikTok, Twitter/X, and LinkedIn posts.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/social-media-post-generator.html" class="tool-card shadow-sm" id="card-social-media-post-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="social-media-post-generator" 
+                onclick="toggleFavorite('social-media-post-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-chat-quote"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Formatting</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Social Media Post Formatter</h3>
+        <p class="tool-card-desc">Format social posts with clean Unicode bullet lists, italic/bold styling, and character counter limits.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/emoji-keyboard.html" class="tool-card shadow-sm" id="card-emoji-keyboard">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="emoji-keyboard" 
+                onclick="toggleFavorite('emoji-keyboard', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-emoji-smile"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Fun</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Emoji Keyboard & Search Picker</h3>
+        <p class="tool-card-desc">Search and copy emojis across Smileys, People, Animals, Food, Flags, and Symbols with 1-click copy.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/twitter-character-counter.html" class="tool-card shadow-sm" id="card-twitter-character-counter">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="twitter-character-counter" 
+                onclick="toggleFavorite('twitter-character-counter', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-twitter-x"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">X / Twitter</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Twitter / X Character Counter</h3>
+        <p class="tool-card-desc">Live 280-character limit counter with circular progress indicator and automatic thread split generator.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/instagram-caption-spacer.html" class="tool-card shadow-sm" id="card-instagram-caption-spacer">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="instagram-caption-spacer" 
+                onclick="toggleFavorite('instagram-caption-spacer', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-instagram"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Instagram</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Instagram Caption Spacer</h3>
+        <p class="tool-card-desc">Create clean line breaks for Instagram captions and bios without clumsy dots or collapsed paragraphs.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/utm-builder.html" class="tool-card shadow-sm" id="card-utm-builder">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="utm-builder" 
+                onclick="toggleFavorite('utm-builder', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-bullseye"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Marketing</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">UTM Campaign URL Builder</h3>
+        <p class="tool-card-desc">Generate Google Analytics trackable campaign links with utm_source, utm_medium, and utm_campaign.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/barcode-generator.html" class="tool-card shadow-sm" id="card-barcode-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="barcode-generator" 
+                onclick="toggleFavorite('barcode-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-upc-scan"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Inventory</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">Barcode Generator (Code 128)</h3>
+        <p class="tool-card-desc">Generate and export printable Code 128 barcodes with custom dimensions and text caption labels.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+    <div class="col">
+      <a href="/tools/linkedin-headline-generator.html" class="tool-card shadow-sm" id="card-linkedin-headline-generator">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="linkedin-headline-generator" 
+                onclick="toggleFavorite('linkedin-headline-generator', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi bi-linkedin"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge bg-secondary-subtle text-secondary-emphasis tool-badge">Career</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">Social Media Tools</span>
+        </div>
+        <h3 class="tool-card-title">LinkedIn Headline Generator</h3>
+        <p class="tool-card-desc">Generate high-converting professional LinkedIn headlines using proven high-impact career formulas.</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  
+      </div>
+    </section>
+    
+  
       </div>
 
       <!-- Empty Search Results Alert -->
@@ -160,8 +2953,111 @@
     </div>
   </main>
 
-  <!-- Dynamic Common Footer (loaded by /js/common.js) -->
-  <div id="footer-placeholder"></div>
+  <!-- Dynamic Common Footer -->
+  <div id="footer-placeholder"><!-- MultiTools Pro Footer Component -->
+<footer class="bg-body-tertiary border-top mt-auto pt-5 pb-4">
+  <!-- Footer Banner Ad Unit (Google AdSense 728x90 Banner) -->
+  <div class="container-xl mb-4">
+    <div class="ad-slot-container ad-leaderboard mx-auto p-2" id="footer-ad-container">
+      <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+        <span class="ad-label text-uppercase small text-muted">Advertisement • Google AdSense</span>
+        <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">Ad Space</span>
+      </div>
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 py-2 text-center">
+        <i class="bi bi-shield-lock-fill text-success fs-3"></i>
+        <div class="text-start">
+          <div class="fw-bold text-body small">Ultra-Fast CDN & Edge Hosting</div>
+          <div class="text-muted small" style="font-size: 0.75rem;">Scale your apps globally with lightning speed and built-in DDoS protection.</div>
+        </div>
+        <a href="https://developers.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 ms-auto" style="font-size: 0.75rem;">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl">
+    <div class="row g-4 mb-4">
+      <!-- Column 1: About & Mission -->
+      <div class="col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="brand-icon">
+            <i class="bi bi-tools"></i>
+          </span>
+          <span class="fw-bold fs-5 text-primary">MultiTools<span class="text-body">Pro</span></span>
+        </div>
+        <p class="text-muted small mb-3">
+          MultiTools Pro is your ultimate free online toolbox featuring 85+ high-speed utilities for developers, designers, content creators, students, and digital marketers.
+        </p>
+        <div class="d-flex align-items-center gap-2 text-success small mb-3">
+          <i class="bi bi-shield-check fs-5"></i>
+          <span class="fw-medium">100% Client-Side Privacy: Your files and data never leave your browser.</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Discord"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Categories -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Categories</h6>
+        <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+          <li><a href="/index.html#image-tools" class="text-muted text-decoration-none hover-primary">Image Tools</a></li>
+          <li><a href="/index.html#seo-tools" class="text-muted text-decoration-none hover-primary">SEO Tools</a></li>
+          <li><a href="/index.html#text-tools" class="text-muted text-decoration-none hover-primary">Text Utilities</a></li>
+          <li><a href="/index.html#developer-tools" class="text-muted text-decoration-none hover-primary">Developer Tools</a></li>
+          <li><a href="/index.html#math-calculators" class="text-muted text-decoration-none hover-primary">Calculators</a></li>
+          <li><a href="/index.html#unit-converters" class="text-muted text-decoration-none hover-primary">Unit Converters</a></li>
+          <li><a href="/index.html#security-encryption" class="text-muted text-decoration-none hover-primary">Security & Hash</a></li>
+          <li><a href="/index.html#social-media-tools" class="text-muted text-decoration-none hover-primary">Social Media</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Top Trending Tools -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Popular Tools</h6>
+        <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+          <li><a href="/tools/image-to-png.html" class="text-muted text-decoration-none">Image to PNG Converter</a></li>
+          <li><a href="/tools/qr-code-generator.html" class="text-muted text-decoration-none">QR Code Generator</a></li>
+          <li><a href="/tools/word-counter.html" class="text-muted text-decoration-none">Word & Character Counter</a></li>
+          <li><a href="/tools/json-formatter.html" class="text-muted text-decoration-none">JSON Formatter & Validator</a></li>
+          <li><a href="/tools/loan-emi-calculator.html" class="text-muted text-decoration-none">Loan EMI Calculator</a></li>
+          <li><a href="/tools/password-generator.html" class="text-muted text-decoration-none">Secure Password Generator</a></li>
+          <li><a href="/tools/youtube-thumbnail-downloader.html" class="text-muted text-decoration-none">YouTube Thumbnail Downloader</a></li>
+          <li><a href="/tools/length-converter.html" class="text-muted text-decoration-none">Length & Distance Converter</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Legal & Support</h6>
+        <ul class="list-unstyled small mb-3 d-flex flex-column gap-2">
+          <li><a href="/tools/privacy-policy-generator.html" class="text-muted text-decoration-none">Privacy Policy</a></li>
+          <li><a href="/tools/terms-of-service-generator.html" class="text-muted text-decoration-none">Terms of Service</a></li>
+          <li><span class="text-muted">Contact: <a href="mailto:support@multitoolspro.example" class="text-decoration-none text-body">support@multitoolspro.example</a></span></li>
+        </ul>
+        <div class="p-3 bg-body rounded-3 border">
+          <div class="fw-semibold small text-body mb-1">Ad Inquiries & Partnerships</div>
+          <p class="text-muted small mb-2" style="font-size: 0.75rem;">Interested in advertising on MultiTools Pro? Reach thousands of daily active users.</p>
+          <a href="mailto:ads@multitoolspro.example?subject=Ad%20Partnership" class="btn btn-sm btn-outline-primary w-100 rounded-pill" style="font-size: 0.75rem;">Contact Ad Sales</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+      <div>
+        © 2026 <strong>MultiTools Pro</strong>. All rights reserved. Built with clean HTML5, Vanilla JavaScript & Bootstrap.
+      </div>
+      <div class="d-flex gap-3">
+        <a href="/index.html" class="text-muted text-decoration-none">Home</a>
+        <a href="#top" class="text-muted text-decoration-none">Back to Top <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

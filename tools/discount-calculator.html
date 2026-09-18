@@ -37,7 +37,127 @@
 </head>
 <body>
   <!-- Dynamic Header -->
-  <div id="header-placeholder"></div>
+  <div id="header-placeholder"><!-- MultiTools Pro Header Component -->
+<header class="sticky-top bg-body border-bottom shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-body py-2">
+    <div class="container-xl">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="/index.html" id="nav-brand-link">
+        <span class="brand-icon">
+          <i class="bi bi-tools"></i>
+        </span>
+        <span class="fw-bold fs-5 text-primary">MultiTools<span class="text-body">Pro</span></span>
+      </a>
+
+      <!-- Mobile Toggle Buttons -->
+      <div class="d-flex align-items-center d-lg-none gap-2">
+        <button class="btn btn-sm btn-outline-secondary rounded-circle" id="mobile-theme-btn" title="Toggle Theme" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars" id="mobile-theme-icon"></i>
+        </button>
+        <button class="btn btn-sm btn-primary rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#globalSearchModal" aria-label="Search tools">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Main Navigation Menu -->
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/index.html">
+              <i class="bi bi-house-door me-1"></i> Home
+            </a>
+          </li>
+
+          <!-- Categories Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle fw-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-grid-3x3-gap me-1"></i> Categories
+            </a>
+            <ul class="dropdown-menu shadow-lg border-0 rounded-3 p-2" id="header-categories-list">
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#image-tools"><i class="bi bi-image text-primary me-2"></i>Image Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#seo-tools"><i class="bi bi-search text-success me-2"></i>SEO Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#text-tools"><i class="bi bi-textarea-t text-purple me-2" style="color:#8b5cf6;"></i>Text Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#developer-tools"><i class="bi bi-code-square text-warning me-2"></i>Developer Tools</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#math-calculators"><i class="bi bi-calculator text-danger me-2"></i>Math & Calculators</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#unit-converters"><i class="bi bi-arrow-left-right text-info me-2"></i>Unit Converters</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#security-encryption"><i class="bi bi-shield-lock text-danger me-2"></i>Security & Encryption</a></li>
+              <li><a class="dropdown-item rounded-2 py-2" href="/index.html#social-media-tools"><i class="bi bi-share text-orange me-2" style="color:#f97316;"></i>Social Media Tools</a></li>
+            </ul>
+          </li>
+
+          <!-- Favorites Quick Link -->
+          <li class="nav-item">
+            <a class="nav-link fw-medium" href="/index.html?filter=favorites" id="header-favorites-link">
+              <i class="bi bi-star-fill text-warning me-1"></i> Favorites
+              <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill ms-1" id="header-fav-count">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Action Items: Search Bar & Theme Switcher -->
+        <div class="d-none d-lg-flex align-items-center gap-3">
+          <!-- Search Bar Trigger Button -->
+          <button class="btn btn-light border d-flex align-items-center justify-content-between px-3 py-1 rounded-pill text-muted shadow-sm" style="width: 240px;" data-bs-toggle="modal" data-bs-target="#globalSearchModal" id="btn-desktop-search">
+            <span><i class="bi bi-search me-2"></i>Search 86+ tools...</span>
+            <span class="badge bg-secondary-subtle text-secondary-emphasis font-monospace px-1">Ctrl K</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="btn btn-outline-secondary rounded-circle" id="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars" id="theme-toggle-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Leaderboard Ad Space (Google AdSense 728x90 Banner) -->
+  <div class="bg-body-tertiary border-top py-2 d-none d-md-block" id="header-ad-banner">
+    <div class="container-xl text-center">
+      <div class="ad-slot-container ad-leaderboard mx-auto py-1 px-3 my-0">
+        <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+          <span class="ad-label text-uppercase small text-muted">Sponsored Advertisement</span>
+          <a href="#" class="text-muted text-decoration-none small" style="font-size: 0.65rem;" onclick="event.preventDefault(); document.getElementById('header-ad-banner').style.display='none';">Dismiss</a>
+        </div>
+        <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="ad-banner-content text-decoration-none w-100">
+          <div class="d-flex align-items-center justify-content-center gap-3 py-1">
+            <span class="badge bg-primary px-2 py-1"><i class="bi bi-cloud-check me-1"></i> Cloud Hosting</span>
+            <span class="fw-semibold text-body small">Deploy high-performance web applications with automated scaling & security.</span>
+            <span class="btn btn-sm btn-primary rounded-pill px-3 py-1 ms-2" style="font-size: 0.75rem;">Get Started Free <i class="bi bi-arrow-right ms-1"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Global Search Modal (Available on every page via Ctrl+K or search button) -->
+<div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-4 border-0 shadow-lg">
+      <div class="modal-header border-bottom-0 pb-0">
+        <div class="position-relative w-100">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 fs-5 text-muted"></i>
+          <input type="text" class="form-control form-control-lg ps-5 pe-5 rounded-pill border-2" id="globalModalSearchInput" placeholder="Search by tool name, category, or keyword..." autocomplete="off">
+          <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body pt-3 pb-4">
+        <div class="d-flex justify-content-between align-items-center px-2 mb-2">
+          <span class="small text-muted fw-semibold text-uppercase" id="globalSearchResultsCount">Recommended Tools</span>
+          <span class="small text-muted">Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>Enter</kbd> to select</span>
+        </div>
+        <div class="list-group list-group-flush overflow-auto" id="globalSearchResultsList" style="max-height: 380px;">
+          <!-- Search results populated dynamically by common.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
   <!-- Breadcrumb Navigation -->
   <div class="bg-body-tertiary border-bottom py-2">
@@ -231,7 +351,110 @@
   </main>
 
   <!-- Dynamic Footer -->
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"><!-- MultiTools Pro Footer Component -->
+<footer class="bg-body-tertiary border-top mt-auto pt-5 pb-4">
+  <!-- Footer Banner Ad Unit (Google AdSense 728x90 Banner) -->
+  <div class="container-xl mb-4">
+    <div class="ad-slot-container ad-leaderboard mx-auto p-2" id="footer-ad-container">
+      <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+        <span class="ad-label text-uppercase small text-muted">Advertisement • Google AdSense</span>
+        <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">Ad Space</span>
+      </div>
+      <div class="d-flex flex-wrap align-items-center justify-content-center gap-3 py-2 text-center">
+        <i class="bi bi-shield-lock-fill text-success fs-3"></i>
+        <div class="text-start">
+          <div class="fw-bold text-body small">Ultra-Fast CDN & Edge Hosting</div>
+          <div class="text-muted small" style="font-size: 0.75rem;">Scale your apps globally with lightning speed and built-in DDoS protection.</div>
+        </div>
+        <a href="https://developers.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 ms-auto" style="font-size: 0.75rem;">Learn More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-xl">
+    <div class="row g-4 mb-4">
+      <!-- Column 1: About & Mission -->
+      <div class="col-lg-4 col-md-6">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <span class="brand-icon">
+            <i class="bi bi-tools"></i>
+          </span>
+          <span class="fw-bold fs-5 text-primary">MultiTools<span class="text-body">Pro</span></span>
+        </div>
+        <p class="text-muted small mb-3">
+          MultiTools Pro is your ultimate free online toolbox featuring 85+ high-speed utilities for developers, designers, content creators, students, and digital marketers.
+        </p>
+        <div class="d-flex align-items-center gap-2 text-success small mb-3">
+          <i class="bi bi-shield-check fs-5"></i>
+          <span class="fw-medium">100% Client-Side Privacy: Your files and data never leave your browser.</span>
+        </div>
+        <div class="d-flex gap-2">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Discord"><i class="bi bi-discord"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Popular Categories -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Categories</h6>
+        <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+          <li><a href="/index.html#image-tools" class="text-muted text-decoration-none hover-primary">Image Tools</a></li>
+          <li><a href="/index.html#seo-tools" class="text-muted text-decoration-none hover-primary">SEO Tools</a></li>
+          <li><a href="/index.html#text-tools" class="text-muted text-decoration-none hover-primary">Text Utilities</a></li>
+          <li><a href="/index.html#developer-tools" class="text-muted text-decoration-none hover-primary">Developer Tools</a></li>
+          <li><a href="/index.html#math-calculators" class="text-muted text-decoration-none hover-primary">Calculators</a></li>
+          <li><a href="/index.html#unit-converters" class="text-muted text-decoration-none hover-primary">Unit Converters</a></li>
+          <li><a href="/index.html#security-encryption" class="text-muted text-decoration-none hover-primary">Security & Hash</a></li>
+          <li><a href="/index.html#social-media-tools" class="text-muted text-decoration-none hover-primary">Social Media</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Top Trending Tools -->
+      <div class="col-lg-3 col-md-6 col-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Popular Tools</h6>
+        <ul class="list-unstyled small mb-0 d-flex flex-column gap-2">
+          <li><a href="/tools/image-to-png.html" class="text-muted text-decoration-none">Image to PNG Converter</a></li>
+          <li><a href="/tools/qr-code-generator.html" class="text-muted text-decoration-none">QR Code Generator</a></li>
+          <li><a href="/tools/word-counter.html" class="text-muted text-decoration-none">Word & Character Counter</a></li>
+          <li><a href="/tools/json-formatter.html" class="text-muted text-decoration-none">JSON Formatter & Validator</a></li>
+          <li><a href="/tools/loan-emi-calculator.html" class="text-muted text-decoration-none">Loan EMI Calculator</a></li>
+          <li><a href="/tools/password-generator.html" class="text-muted text-decoration-none">Secure Password Generator</a></li>
+          <li><a href="/tools/youtube-thumbnail-downloader.html" class="text-muted text-decoration-none">YouTube Thumbnail Downloader</a></li>
+          <li><a href="/tools/length-converter.html" class="text-muted text-decoration-none">Length & Distance Converter</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Legal & Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold text-uppercase small text-body mb-3">Legal & Support</h6>
+        <ul class="list-unstyled small mb-3 d-flex flex-column gap-2">
+          <li><a href="/tools/privacy-policy-generator.html" class="text-muted text-decoration-none">Privacy Policy</a></li>
+          <li><a href="/tools/terms-of-service-generator.html" class="text-muted text-decoration-none">Terms of Service</a></li>
+          <li><span class="text-muted">Contact: <a href="mailto:support@multitoolspro.example" class="text-decoration-none text-body">support@multitoolspro.example</a></span></li>
+        </ul>
+        <div class="p-3 bg-body rounded-3 border">
+          <div class="fw-semibold small text-body mb-1">Ad Inquiries & Partnerships</div>
+          <p class="text-muted small mb-2" style="font-size: 0.75rem;">Interested in advertising on MultiTools Pro? Reach thousands of daily active users.</p>
+          <a href="mailto:ads@multitoolspro.example?subject=Ad%20Partnership" class="btn btn-sm btn-outline-primary w-100 rounded-pill" style="font-size: 0.75rem;">Contact Ad Sales</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="border-top pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small text-muted">
+      <div>
+        © 2026 <strong>MultiTools Pro</strong>. All rights reserved. Built with clean HTML5, Vanilla JavaScript & Bootstrap.
+      </div>
+      <div class="d-flex gap-3">
+        <a href="/index.html" class="text-muted text-decoration-none">Home</a>
+        <a href="#top" class="text-muted text-decoration-none">Back to Top <i class="bi bi-arrow-up"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

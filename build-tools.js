@@ -20,6 +20,10 @@ const sandbox = { window: {} };
 const fn = new Function('window', catalogFileContent);
 fn(sandbox.window);
 const tools = sandbox.window.TOOLS_CATALOG;
+const categories = sandbox.window.TOOLS_CATEGORIES;
+
+const headerHtml = fs.readFileSync(path.resolve(__dirname, 'components/header.html'), 'utf8');
+const footerHtml = fs.readFileSync(path.resolve(__dirname, 'components/footer.html'), 'utf8');
 
 console.log(`Generating pages for ${tools.length} tools...`);
 
@@ -1577,7 +1581,7 @@ for (const tool of tools) {
 </head>
 <body>
   <!-- Dynamic Header -->
-  <div id="header-placeholder"></div>
+  <div id="header-placeholder">${headerHtml}</div>
 
   <!-- Breadcrumb Navigation -->
   <div class="bg-body-tertiary border-bottom py-2">
@@ -1717,7 +1721,7 @@ for (const tool of tools) {
   </main>
 
   <!-- Dynamic Footer -->
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder">${footerHtml}</div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -1735,3 +1739,280 @@ for (const tool of tools) {
 }
 
 console.log(`Successfully generated ${tools.length} tool files in /tools/!`);
+
+// Helper to pre-render tool cards for index.html
+function renderToolCardHtml(t) {
+  const badgeColor = t.badge === 'Popular' ? 'bg-primary-subtle text-primary-emphasis' :
+                     t.badge === 'Must Have' ? 'bg-success-subtle text-success-emphasis' :
+                     t.badge === 'SEO' ? 'bg-warning-subtle text-warning-emphasis' :
+                     'bg-secondary-subtle text-secondary-emphasis';
+  return `
+    <div class="col">
+      <a href="${t.url}" class="tool-card shadow-sm" id="card-${t.id}">
+        <button class="btn-favorite-card" 
+                data-favorite-tool-id="${t.id}" 
+                onclick="toggleFavorite('${t.id}', event)" 
+                title="Add to favorites"
+                aria-label="Bookmark tool">
+          <i class="bi bi-star"></i>
+        </button>
+        <div class="tool-icon-wrapper">
+          <i class="bi ${t.icon}"></i>
+        </div>
+        <div class="d-flex align-items-center justify-content-between mb-1">
+          <span class="badge ${badgeColor} tool-badge">${t.badge || 'Free'}</span>
+          <span class="text-muted small" style="font-size: 0.7rem;">${t.category}</span>
+        </div>
+        <h3 class="tool-card-title">${t.name}</h3>
+        <p class="tool-card-desc">${t.description}</p>
+        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
+          <span>Launch Tool</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </div>
+      </a>
+    </div>
+  `;
+}
+
+// Pre-render categories section HTML for instant index.html loading
+let preRenderedCategoriesHtml = '';
+categories.forEach((cat, index) => {
+  const catTools = tools.filter(t => t.category === cat.name);
+  if (catTools.length === 0) return;
+  const slug = cat.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const cardsHtml = catTools.map(t => renderToolCardHtml(t)).join('');
+
+  let adHtml = '';
+  if (index === 2) {
+    adHtml = `
+      <div class="ad-slot-container ad-incontent my-4">
+        <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+          <span class="ad-label text-uppercase small text-muted">Sponsored • Google AdSense</span>
+          <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">Recommended</span>
+        </div>
+        <div class="d-flex flex-wrap align-items-center justify-content-between w-100 p-2 text-start">
+          <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-speedometer2 text-primary fs-2"></i>
+            <div>
+              <div class="fw-bold text-body small">Next-Gen Cloud Database & Storage</div>
+              <div class="text-muted small" style="font-size: 0.78rem;">Ultra-low latency serverless database with instant global replication.</div>
+            </div>
+          </div>
+          <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-3 mt-2 mt-sm-0">Get Started Free</a>
+        </div>
+      </div>
+    `;
+  }
+
+  preRenderedCategoriesHtml += `
+    <section class="category-section" id="${slug}">
+      <div class="category-header">
+        <h2 class="category-title h4 mb-0">
+          <i class="bi ${cat.icon} text-primary me-2"></i>
+          ${cat.name}
+          <span class="badge bg-secondary-subtle text-secondary-emphasis rounded-pill fs-6 ms-2">${catTools.length}</span>
+        </h2>
+        <a href="#top" class="text-muted small text-decoration-none d-none d-sm-inline">
+          <i class="bi bi-arrow-up-short"></i> Top
+        </a>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+        ${cardsHtml}
+      </div>
+    </section>
+    ${adHtml}
+  `;
+});
+
+// Generate complete pre-rendered index.html
+const indexHtmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiTools Pro – 100+ Free Online Web Tools</title>
+  <meta name="description" content="All-in-one suite of 100+ free online tools including image converters, calculators, SEO utilities, text tools, developer helpers, and unit converters.">
+  <meta property="og:title" content="MultiTools Pro – 100+ Free Online Web Tools">
+  <meta property="og:description" content="All-in-one suite of 100+ free online tools including image converters, calculators, SEO utilities, text tools, developer helpers, and unit converters.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MultiTools Pro">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MultiTools Pro – 100+ Free Online Web Tools">
+  <meta name="twitter:description" content="All-in-one suite of 100+ free online tools including image converters, calculators, SEO utilities, text tools, developer helpers, and unit converters.">
+
+  <!-- Schema.org WebApplication JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "MultiTools Pro",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "description": "All-in-one suite of 100+ free online tools including image converters, calculators, SEO utilities, text tools, developer helpers, and unit converters.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom Modern Stylesheet -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body id="top">
+  <!-- Dynamic Common Header -->
+  <div id="header-placeholder">${headerHtml}</div>
+
+  <!-- Hero Section with Search & Stats -->
+  <section class="py-5 text-center bg-body border-bottom position-relative overflow-hidden">
+    <div class="container-xl">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <!-- Trust Badge -->
+          <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-primary-subtle text-primary-emphasis small fw-semibold mb-3">
+            <i class="bi bi-shield-check"></i>
+            <span>100% Client-Side Privacy • Zero Server Uploads</span>
+          </div>
+
+          <h1 class="display-5 fw-bold text-body mb-3 tracking-tight">
+            The Ultimate <span class="text-primary">Multi-Tools</span> Platform
+          </h1>
+          <p class="lead text-muted fs-6 mb-4">
+            Free, fast, and private online tools for image conversion, web calculations, SEO auditing, text manipulation, and developer productivity.
+          </p>
+
+          <!-- Hero Search Bar -->
+          <div class="hero-search-box mb-4">
+            <i class="bi bi-search hero-search-icon"></i>
+            <input type="text" class="form-control hero-search-input" id="heroSearchInput" placeholder="Search 100+ tools by name, keyword, or category..." autocomplete="off">
+            <button class="btn btn-sm btn-link text-muted position-absolute end-0 top-50 translate-middle-y me-3 d-none" id="clearSearchBtn" title="Clear search">
+              <i class="bi bi-x-circle-fill fs-5"></i>
+            </button>
+          </div>
+
+          <!-- Feature Badges -->
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill font-normal"><i class="bi bi-lightning-charge text-warning me-1"></i> ${tools.length}+ Online Tools</span>
+            <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill font-normal"><i class="bi bi-phone text-primary me-1"></i> Fully Responsive</span>
+            <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill font-normal"><i class="bi bi-lock text-success me-1"></i> No Login Required</span>
+            <span class="badge bg-body-secondary text-body border px-3 py-2 rounded-pill font-normal"><i class="bi bi-infinity text-info me-1"></i> 100% Free Forever</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Category Navigation Filter Bar -->
+  <div class="sticky-top bg-body border-bottom py-2 shadow-xs" style="top: 56px; z-index: 1020;">
+    <div class="container-xl">
+      <div class="category-nav-scroll">
+        <a href="#" class="category-pill-btn active" data-category="all">
+          <i class="bi bi-grid-fill me-1"></i> All Tools (${tools.length})
+        </a>
+        <a href="#" class="category-pill-btn" data-category="favorites">
+          <i class="bi bi-star-fill text-warning me-1"></i> Favorites
+        </a>
+        <a href="#image-tools" class="category-pill-btn" data-category="Image Tools">
+          <i class="bi bi-image text-primary me-1"></i> Image Tools
+        </a>
+        <a href="#seo-tools" class="category-pill-btn" data-category="SEO Tools">
+          <i class="bi bi-search text-success me-1"></i> SEO Tools
+        </a>
+        <a href="#text-tools" class="category-pill-btn" data-category="Text Tools">
+          <i class="bi bi-textarea-t text-purple me-1" style="color:#8b5cf6;"></i> Text Utilities
+        </a>
+        <a href="#developer-tools" class="category-pill-btn" data-category="Developer Tools">
+          <i class="bi bi-code-square text-warning me-1"></i> Developer Tools
+        </a>
+        <a href="#math-calculators" class="category-pill-btn" data-category="Math & Calculators">
+          <i class="bi bi-calculator text-danger me-1"></i> Calculators
+        </a>
+        <a href="#unit-converters" class="category-pill-btn" data-category="Unit Converters">
+          <i class="bi bi-arrow-left-right text-info me-1"></i> Unit Converters
+        </a>
+        <a href="#security-encryption" class="category-pill-btn" data-category="Security & Encryption">
+          <i class="bi bi-shield-lock text-danger me-1"></i> Security & Crypt
+        </a>
+        <a href="#social-media-tools" class="category-pill-btn" data-category="Social Media Tools">
+          <i class="bi bi-share text-orange me-1" style="color:#f97316;"></i> Social Media
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Tools Section -->
+  <main class="py-4">
+    <div class="container-xl">
+      <!-- Live Count Status -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <span class="small fw-semibold text-muted text-uppercase" id="toolsCountDisplay">Showing all ${tools.length} tools</span>
+        <div class="d-flex align-items-center gap-2 small text-muted">
+          <span>Sort: <strong class="text-body">Categorized</strong></span>
+        </div>
+      </div>
+
+      <!-- Recently Visited Tools Section -->
+      <section id="recentSection" class="mb-5 d-none">
+        <div class="category-header">
+          <h2 class="category-title h5 mb-0">
+            <i class="bi bi-clock-history text-primary me-2"></i> Recently Used Tools
+          </h2>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3" id="recentGrid"></div>
+      </section>
+
+      <!-- All Categories Grids Container (Pre-rendered for zero loading delay) -->
+      <div id="categoriesGridContainer">
+        ${preRenderedCategoriesHtml}
+      </div>
+
+      <!-- Empty Search Results Alert -->
+      <div id="noResultsContainer" class="text-center py-5 d-none">
+        <i class="bi bi-search display-3 text-muted mb-3 d-block"></i>
+        <h4 class="fw-bold">No Matching Tools Found</h4>
+        <p class="text-muted" id="noResultsQuery">Try searching with a different keyword or browse all categories.</p>
+        <button class="btn btn-primary rounded-pill px-4" onclick="document.getElementById('heroSearchInput').value=''; document.getElementById('heroSearchInput').dispatchEvent(new Event('input'));">
+          Reset Search
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dynamic Common Footer -->
+  <div id="footer-placeholder">${footerHtml}</div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/tools-data.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
+`;
+
+fs.writeFileSync(path.resolve(__dirname, 'index.html'), indexHtmlContent, 'utf8');
+
+// Copy static assets to public folder for production Vite bundling
+function copyDirSync(src, dest) {
+  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDirSync(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
+copyDirSync(path.resolve(__dirname, 'js'), path.resolve(__dirname, 'public/js'));
+copyDirSync(path.resolve(__dirname, 'css'), path.resolve(__dirname, 'public/css'));
+copyDirSync(path.resolve(__dirname, 'components'), path.resolve(__dirname, 'public/components'));
+
+console.log('Build completed successfully: all 101 tools, pre-rendered index.html, and public assets updated.');
