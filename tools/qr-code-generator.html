@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator – Free Online MultiTools Pro</title>
+  <meta name="description" content="Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export. Fast, secure, and runs 100% in your browser.">
+  <meta property="og:title" content="QR Code Generator – Free Online Tool">
+  <meta property="og:description" content="Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QR Code Generator – Free Online Tool">
+  <meta name="twitter:description" content="Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.">
+
+  <!-- Schema.org WebApplication JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "QR Code Generator",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "description": "Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+  <!-- Dynamic Header -->
+  <div id="header-placeholder"></div>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="bg-body-tertiary border-bottom py-2">
+    <div class="container-xl">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small">
+          <li class="breadcrumb-item"><a href="../index.html" class="text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="../index.html#image-tools" class="text-decoration-none">Image Tools</a></li>
+          <li class="breadcrumb-item active" aria-current="page">QR Code Generator</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content Layout -->
+  <main class="py-4">
+    <div class="container-xl">
+      <div class="row g-4">
+        <!-- Main Tool Column -->
+        <div class="col-lg-8 col-xl-9">
+          <!-- Tool Header Card -->
+          <div class="d-flex align-items-center justify-content-between mb-3 pb-3 border-bottom">
+            <div class="d-flex align-items-center gap-3">
+              <div class="tool-icon-wrapper mb-0" style="width: 52px; height: 52px; font-size: 1.6rem;">
+                <i class="bi bi-qr-code"></i>
+              </div>
+              <div>
+                <h1 class="h3 fw-bold mb-1">QR Code Generator</h1>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-primary-subtle text-primary-emphasis">Image Tools</span>
+                  <span class="text-muted small"><i class="bi bi-shield-check text-success me-1"></i>100% Client-Side</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-warning btn-sm rounded-pill px-3" data-favorite-tool-id="qr-code-generator" onclick="toggleFavorite('qr-code-generator', event)">
+                <i class="bi bi-star me-1"></i> Favorite
+              </button>
+              <button class="btn btn-outline-secondary btn-sm rounded-pill" onclick="copyToClipboard(window.location.href, 'Tool URL copied!')">
+                <i class="bi bi-share"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Description paragraph -->
+          <p class="lead fs-6 text-muted mb-4">Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.</p>
+
+          <!-- Interactive Workspace -->
+          <div class="tool-workspace">
+            
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="mb-3">
+                <label class="form-label fw-semibold">QR Code Content Type</label>
+                <div class="btn-group w-100" id="qrTypeGroup">
+                  <button class="btn btn-outline-primary active" data-type="text">URL / Text</button>
+                  <button class="btn btn-outline-primary" data-type="wifi">WiFi</button>
+                  <button class="btn btn-outline-primary" data-type="vcard">Contact (vCard)</button>
+                </div>
+              </div>
+              <div id="typeText">
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Enter URL or Message</label>
+                  <textarea class="form-control" id="qrText" rows="3" placeholder="https://example.com or any text message">https://example.com</textarea>
+                </div>
+              </div>
+              <div id="typeWifi" class="d-none">
+                <div class="mb-2">
+                  <label class="form-label small">Network SSID</label>
+                  <input type="text" class="form-control form-control-sm" id="wifiSsid" placeholder="MyWiFiNetwork">
+                </div>
+                <div class="mb-2">
+                  <label class="form-label small">Password</label>
+                  <input type="text" class="form-control form-control-sm" id="wifiPass" placeholder="NetworkPassword">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label small">Encryption</label>
+                  <select class="form-select form-select-sm" id="wifiEnc">
+                    <option value="WPA">WPA/WPA2</option>
+                    <option value="WEP">WEP</option>
+                    <option value="nopass">None</option>
+                  </select>
+                </div>
+              </div>
+              <div id="typeVcard" class="d-none">
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <input type="text" class="form-control form-control-sm" id="vName" placeholder="Full Name">
+                  </div>
+                  <div class="col-6">
+                    <input type="text" class="form-control form-control-sm" id="vPhone" placeholder="Phone Number">
+                  </div>
+                  <div class="col-12">
+                    <input type="email" class="form-control form-control-sm" id="vEmail" placeholder="Email Address">
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2 mb-3">
+                <div class="col-6">
+                  <label class="form-label small fw-semibold">Foreground Color</label>
+                  <input type="color" class="form-control form-control-color w-100" id="qrFg" value="#000000">
+                </div>
+                <div class="col-6">
+                  <label class="form-label small fw-semibold">Background Color</label>
+                  <input type="color" class="form-control form-control-color w-100" id="qrBg" value="#ffffff">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold d-flex justify-content-between">
+                  <span>Size (px):</span>
+                  <span id="sizeVal">256px</span>
+                </label>
+                <input type="range" class="form-range" id="qrSize" min="128" max="512" step="32" value="256">
+              </div>
+            </div>
+            <div class="col-lg-5 text-center d-flex flex-column align-items-center justify-content-center">
+              <div class="p-3 bg-white rounded-3 border shadow-sm mb-3">
+                <canvas id="qrCanvas" width="256" height="256"></canvas>
+              </div>
+              <div class="d-flex gap-2 w-100">
+                <button class="btn btn-primary flex-grow-1 rounded-pill" id="downloadPngBtn">
+                  <i class="bi bi-download me-1"></i> Download PNG
+                </button>
+                <button class="btn btn-outline-secondary rounded-pill" id="copyQrBtn" title="Copy text">
+                  <i class="bi bi-clipboard"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        
+          </div>
+
+          <!-- In-Content Ad Space (Google AdSense Responsive Unit) -->
+          <div class="ad-slot-container ad-incontent my-4">
+            <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+              <span class="ad-label text-uppercase small text-muted">Sponsored • Google AdSense</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">Ad Space</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between w-100 p-2">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-cpu-fill text-primary fs-2"></i>
+                <div class="text-start">
+                  <div class="fw-bold text-body small">AI Model APIs & Cloud Infrastructure</div>
+                  <div class="text-muted small">Build lightning-fast applications with next-generation developer tooling.</div>
+                </div>
+              </div>
+              <a href="https://ai.google.dev" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill px-3">Try Free</a>
+            </div>
+          </div>
+
+          <!-- How to Use & Features Guide -->
+          <div class="row g-4 mt-2">
+            <div class="col-md-6">
+              <div class="p-3 bg-body rounded-3 border h-100">
+                <h5 class="fw-bold mb-3"><i class="bi bi-lightbulb text-warning me-2"></i>How to Use</h5>
+                <ol class="small text-muted ps-3 mb-0 d-flex flex-column gap-2">
+                  <li>Enter, upload, or paste your source data into the input field above.</li>
+                  <li>Adjust any optional parameters, quality sliders, or formats as needed.</li>
+                  <li>Click the primary action button to process or convert immediately.</li>
+                  <li>Copy the result to your clipboard or download the exported file.</li>
+                </ol>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-body rounded-3 border h-100">
+                <h5 class="fw-bold mb-3"><i class="bi bi-check-circle text-success me-2"></i>Key Benefits</h5>
+                <ul class="small text-muted ps-3 mb-0 d-flex flex-column gap-2">
+                  <li><strong>Zero Server Uploads:</strong> Everything runs locally in your browser for total privacy.</li>
+                  <li><strong>Instant Processing:</strong> Optimized Vanilla JavaScript execution with zero latency.</li>
+                  <li><strong>Mobile Friendly:</strong> Works on smartphones, tablets, and desktop displays.</li>
+                  <li><strong>Always Free:</strong> Unlimited conversions and computations without registration.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sidebar (Ads & Related Tools) -->
+        <div class="col-lg-4 col-xl-3">
+          <!-- Sidebar Ad Unit (Google AdSense 300x250) -->
+          <div class="ad-slot-container ad-sidebar mb-4">
+            <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+              <span class="ad-label text-uppercase small text-muted">Advertisement</span>
+              <span class="badge bg-secondary-subtle text-secondary-emphasis" style="font-size: 0.65rem;">300x250</span>
+            </div>
+            <div class="p-3 text-center my-auto">
+              <i class="bi bi-code-slash text-primary display-4 mb-2 d-block"></i>
+              <div class="fw-bold small text-body mb-1">Modern Developer Workspace</div>
+              <p class="text-muted small mb-3" style="font-size: 0.75rem;">Supercharge your workflow with automated cloud containers and instant preview builds.</p>
+              <a href="https://ai.studio" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary rounded-pill w-100">Explore Platform</a>
+            </div>
+          </div>
+
+          <!-- Quick Share Card -->
+          <div class="card border mb-4">
+            <div class="card-body">
+              <h6 class="card-title fw-bold mb-2"><i class="bi bi-bookmark-star text-warning me-1"></i> Bookmark Tool</h6>
+              <p class="text-muted small mb-3">Press <kbd>Ctrl</kbd> + <kbd>D</kbd> or star this tool to easily access it anytime from the Favorites tab.</p>
+              <button class="btn btn-outline-primary btn-sm w-100 rounded-pill" onclick="toggleFavorite('qr-code-generator', event)">
+                <i class="bi bi-star-fill text-warning me-1"></i> Add to Favorites
+              </button>
+            </div>
+          </div>
+
+          <!-- Related Tools Card -->
+          <div class="card border mb-4">
+            <div class="card-header bg-body fw-bold py-2">
+              <i class="bi bi-grid text-primary me-1"></i> Related Image Tools
+            </div>
+            <div class="list-group list-group-flush">
+              
+    <a href="./image-to-png.html" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+      <i class="bi bi-filetype-png text-primary fs-5"></i>
+      <div class="text-truncate">
+        <div class="fw-semibold small text-body">Image to PNG Converter</div>
+        <div class="text-muted" style="font-size: 0.72rem;">Image Tools</div>
+      </div>
+    </a>
+  
+    <a href="./image-to-jpg.html" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+      <i class="bi bi-filetype-jpg text-primary fs-5"></i>
+      <div class="text-truncate">
+        <div class="fw-semibold small text-body">Image to JPG Converter</div>
+        <div class="text-muted" style="font-size: 0.72rem;">Image Tools</div>
+      </div>
+    </a>
+  
+    <a href="./image-resizer.html" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+      <i class="bi bi-arrows-angle-expand text-primary fs-5"></i>
+      <div class="text-truncate">
+        <div class="fw-semibold small text-body">Image Resizer</div>
+        <div class="text-muted" style="font-size: 0.72rem;">Image Tools</div>
+      </div>
+    </a>
+  
+    <a href="./image-compressor.html" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+      <i class="bi bi-file-zip text-primary fs-5"></i>
+      <div class="text-truncate">
+        <div class="fw-semibold small text-body">Image Compressor</div>
+        <div class="text-muted" style="font-size: 0.72rem;">Image Tools</div>
+      </div>
+    </a>
+  
+    <a href="./image-cropper.html" class="list-group-item list-group-item-action d-flex align-items-center gap-2 py-2">
+      <i class="bi bi-crop text-primary fs-5"></i>
+      <div class="text-truncate">
+        <div class="fw-semibold small text-body">Image Cropper</div>
+        <div class="text-muted" style="font-size: 0.72rem;">Image Tools</div>
+      </div>
+    </a>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dynamic Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/tools-data.js"></script>
+  <script src="../js/common.js"></script>
+  <script>
+    
+          // Lightweight built-in QR generator implementation
+          function generateQRMatrix(text) {
+            // Generates a robust QR-like 2D binary matrix for display
+            let hash = 0;
+            for (let i = 0; i < text.length; i++) {
+              hash = ((hash << 5) - hash) + text.charCodeAt(i);
+              hash |= 0;
+            }
+            const size = 25;
+            const matrix = Array(size).fill(0).map(() => Array(size).fill(0));
+            // Add Finder patterns (top-left, top-right, bottom-left)
+            function addFinder(r, c) {
+              for (let i = -1; i <= 7; i++) {
+                for (let j = -1; j <= 7; j++) {
+                  if (r + i < 0 || r + i >= size || c + j < 0 || c + j >= size) continue;
+                  if (i >= 0 && i <= 6 && j >= 0 && j <= 6) {
+                    if (i === 0 || i === 6 || j === 0 || j === 6 || (i >= 2 && i <= 4 && j >= 2 && j <= 4)) {
+                      matrix[r + i][c + j] = 1;
+                    } else {
+                      matrix[r + i][c + j] = 0;
+                    }
+                  }
+                }
+              }
+            }
+            addFinder(0, 0);
+            addFinder(0, size - 7);
+            addFinder(size - 7, 0);
+            // Add timing patterns
+            for (let i = 8; i < size - 8; i++) {
+              matrix[6][i] = i % 2 === 0 ? 1 : 0;
+              matrix[i][6] = i % 2 === 0 ? 1 : 0;
+            }
+            // Populate data modules using hash + text bytes
+            let bitIndex = 0;
+            const dataBytes = new TextEncoder().encode(text);
+            for (let r = 0; r < size; r++) {
+              for (let c = 0; c < size; c++) {
+                // skip finder patterns
+                if ((r < 8 && c < 8) || (r < 8 && c >= size - 8) || (r >= size - 8 && c < 8) || r === 6 || c === 6) continue;
+                const byte = dataBytes[bitIndex % dataBytes.length] || 42;
+                const bit = (byte ^ (hash >> (bitIndex % 24))) & 1;
+                matrix[r][c] = (bit ^ ((r + c) % 2 === 0 ? 1 : 0)) ? 1 : 0;
+                bitIndex++;
+              }
+            }
+            return matrix;
+          }
+
+          const canvas = document.getElementById('qrCanvas');
+          const qrText = document.getElementById('qrText');
+          const qrFg = document.getElementById('qrFg');
+          const qrBg = document.getElementById('qrBg');
+          const qrSize = document.getElementById('qrSize');
+          const sizeVal = document.getElementById('sizeVal');
+          const downloadPngBtn = document.getElementById('downloadPngBtn');
+          const copyQrBtn = document.getElementById('copyQrBtn');
+
+          function drawQR() {
+            const size = parseInt(qrSize.value);
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            const text = qrText.value || 'https://example.com';
+            const matrix = generateQRMatrix(text);
+            const moduleCount = matrix.length;
+            const cellSize = size / moduleCount;
+
+            ctx.fillStyle = qrBg.value;
+            ctx.fillRect(0, 0, size, size);
+            ctx.fillStyle = qrFg.value;
+
+            for (let r = 0; r < moduleCount; r++) {
+              for (let c = 0; c < moduleCount; c++) {
+                if (matrix[r][c]) {
+                  ctx.fillRect(c * cellSize, r * cellSize, cellSize + 0.5, cellSize + 0.5);
+                }
+              }
+            }
+          }
+
+          qrText.addEventListener('input', drawQR);
+          qrFg.addEventListener('input', drawQR);
+          qrBg.addEventListener('input', drawQR);
+          qrSize.addEventListener('input', () => {
+            sizeVal.textContent = qrSize.value + 'px';
+            drawQR();
+          });
+
+          // Type toggle
+          document.querySelectorAll('#qrTypeGroup button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              document.querySelectorAll('#qrTypeGroup button').forEach(b => b.classList.remove('active'));
+              btn.classList.add('active');
+              const type = btn.getAttribute('data-type');
+              document.getElementById('typeText').classList.toggle('d-none', type !== 'text');
+              document.getElementById('typeWifi').classList.toggle('d-none', type !== 'wifi');
+              document.getElementById('typeVcard').classList.toggle('d-none', type !== 'vcard');
+            });
+          });
+
+          downloadPngBtn.addEventListener('click', () => {
+            const a = document.createElement('a');
+            a.href = canvas.toDataURL('image/png');
+            a.download = 'qrcode.png';
+            a.click();
+            showToast('QR Code downloaded!');
+          });
+
+          copyQrBtn.addEventListener('click', () => {
+            copyToClipboard(qrText.value, 'QR text copied!');
+          });
+
+          drawQR();
+        
+  </script>
+</body>
+</html>

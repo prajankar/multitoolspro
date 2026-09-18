@@ -1,0 +1,6 @@
+{
+  "name": "MultiTools Pro",
+  "description": "All-in-one suite of 100+ free online tools including image converters, calculators, SEO utilities, text tools, developer helpers, and unit converters.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
