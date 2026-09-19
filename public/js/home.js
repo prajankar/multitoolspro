@@ -135,17 +135,50 @@
     categoriesContainer.innerHTML = fullHtml;
   }
 
+  // Helper to get category theme class and display label
+  function getToolThemeAndCategory(t) {
+    let theme = 'theme-text';
+    let catLabel = t.category;
+    
+    if (t.id && t.id.includes('pdf')) {
+      theme = 'theme-pdf';
+      catLabel = 'Pdf Tools';
+    } else if (t.category === 'Image Tools') {
+      theme = 'theme-image';
+      catLabel = 'Image Tools';
+    } else if (t.category === 'SEO Tools') {
+      theme = 'theme-seo';
+      catLabel = 'SEO Tools';
+    } else if (t.category === 'Text Tools') {
+      theme = 'theme-text';
+      catLabel = 'Text Tools';
+    } else if (t.category === 'Developer Tools') {
+      theme = 'theme-dev';
+      catLabel = 'Developer Tools';
+    } else if (t.category === 'Math & Calculators') {
+      theme = 'theme-math';
+      catLabel = 'Calculators';
+    } else if (t.category === 'Unit Converters') {
+      theme = 'theme-unit';
+      catLabel = 'Unit Converters';
+    } else if (t.category === 'Security & Encryption') {
+      theme = 'theme-security';
+      catLabel = 'Security';
+    } else if (t.category === 'Social Media Tools') {
+      theme = 'theme-social';
+      catLabel = 'Social Media';
+    }
+    return { theme, catLabel };
+  }
+
   // --- Render Single Tool Card HTML ---
   function renderToolCard(tool, favorites) {
     const isFav = favorites.includes(tool.id);
-    const badgeColor = tool.badge === 'Popular' ? 'bg-primary-subtle text-primary-emphasis' :
-                       tool.badge === 'Must Have' ? 'bg-success-subtle text-success-emphasis' :
-                       tool.badge === 'SEO' ? 'bg-warning-subtle text-warning-emphasis' :
-                       'bg-secondary-subtle text-secondary-emphasis';
+    const { theme, catLabel } = getToolThemeAndCategory(tool);
 
     return `
       <div class="col">
-        <a href="${tool.url}" class="tool-card shadow-sm" id="card-${tool.id}">
+        <a href="${tool.url}" class="tool-card ${theme}" id="card-${tool.id}">
           <button class="btn-favorite-card ${isFav ? 'active' : ''}" 
                   data-favorite-tool-id="${tool.id}" 
                   onclick="toggleFavorite('${tool.id}', event)" 
@@ -153,19 +186,16 @@
                   aria-label="Bookmark tool">
             <i class="bi ${isFav ? 'bi-star-fill' : 'bi-star'}"></i>
           </button>
-          <div class="tool-icon-wrapper">
-            <i class="bi ${tool.icon}"></i>
+          <div class="tool-card-top">
+            <div class="tool-icon-wrapper">
+              <i class="bi ${tool.icon}"></i>
+            </div>
+            <div class="tool-card-header-text">
+              <h3 class="tool-card-title">${tool.name}</h3>
+              <span class="tool-card-category">${catLabel}</span>
+            </div>
           </div>
-          <div class="d-flex align-items-center justify-content-between mb-1">
-            <span class="badge ${badgeColor} tool-badge">${tool.badge || 'Free'}</span>
-            <span class="text-muted small" style="font-size: 0.7rem;">${tool.category}</span>
-          </div>
-          <h3 class="tool-card-title">${tool.name}</h3>
           <p class="tool-card-desc">${tool.description}</p>
-          <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
-            <span>Launch Tool</span>
-            <i class="bi bi-arrow-right ms-1"></i>
-          </div>
         </a>
       </div>
     `;

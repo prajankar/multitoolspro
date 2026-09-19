@@ -1740,15 +1740,48 @@ for (const tool of tools) {
 
 console.log(`Successfully generated ${tools.length} tool files in /tools/!`);
 
-// Helper to pre-render tool cards for index.html
+// Helper to get category theme class and display label
+function getToolThemeAndCategory(t) {
+  let theme = 'theme-text';
+  let catLabel = t.category;
+  
+  if (t.id.includes('pdf')) {
+    theme = 'theme-pdf';
+    catLabel = 'Pdf Tools';
+  } else if (t.category === 'Image Tools') {
+    theme = 'theme-image';
+    catLabel = 'Image Tools';
+  } else if (t.category === 'SEO Tools') {
+    theme = 'theme-seo';
+    catLabel = 'SEO Tools';
+  } else if (t.category === 'Text Tools') {
+    theme = 'theme-text';
+    catLabel = 'Text Tools';
+  } else if (t.category === 'Developer Tools') {
+    theme = 'theme-dev';
+    catLabel = 'Developer Tools';
+  } else if (t.category === 'Math & Calculators') {
+    theme = 'theme-math';
+    catLabel = 'Calculators';
+  } else if (t.category === 'Unit Converters') {
+    theme = 'theme-unit';
+    catLabel = 'Unit Converters';
+  } else if (t.category === 'Security & Encryption') {
+    theme = 'theme-security';
+    catLabel = 'Security';
+  } else if (t.category === 'Social Media Tools') {
+    theme = 'theme-social';
+    catLabel = 'Social Media';
+  }
+  return { theme, catLabel };
+}
+
+// Helper to pre-render tool cards for index.html matching user's reference design
 function renderToolCardHtml(t) {
-  const badgeColor = t.badge === 'Popular' ? 'bg-primary-subtle text-primary-emphasis' :
-                     t.badge === 'Must Have' ? 'bg-success-subtle text-success-emphasis' :
-                     t.badge === 'SEO' ? 'bg-warning-subtle text-warning-emphasis' :
-                     'bg-secondary-subtle text-secondary-emphasis';
+  const { theme, catLabel } = getToolThemeAndCategory(t);
   return `
     <div class="col">
-      <a href="${t.url}" class="tool-card shadow-sm" id="card-${t.id}">
+      <a href="${t.url}" class="tool-card ${theme}" id="card-${t.id}">
         <button class="btn-favorite-card" 
                 data-favorite-tool-id="${t.id}" 
                 onclick="toggleFavorite('${t.id}', event)" 
@@ -1756,19 +1789,16 @@ function renderToolCardHtml(t) {
                 aria-label="Bookmark tool">
           <i class="bi bi-star"></i>
         </button>
-        <div class="tool-icon-wrapper">
-          <i class="bi ${t.icon}"></i>
+        <div class="tool-card-top">
+          <div class="tool-icon-wrapper">
+            <i class="bi ${t.icon}"></i>
+          </div>
+          <div class="tool-card-header-text">
+            <h3 class="tool-card-title">${t.name}</h3>
+            <span class="tool-card-category">${catLabel}</span>
+          </div>
         </div>
-        <div class="d-flex align-items-center justify-content-between mb-1">
-          <span class="badge ${badgeColor} tool-badge">${t.badge || 'Free'}</span>
-          <span class="text-muted small" style="font-size: 0.7rem;">${t.category}</span>
-        </div>
-        <h3 class="tool-card-title">${t.name}</h3>
         <p class="tool-card-desc">${t.description}</p>
-        <div class="d-flex align-items-center text-primary small fw-semibold mt-auto">
-          <span>Launch Tool</span>
-          <i class="bi bi-arrow-right ms-1"></i>
-        </div>
       </a>
     </div>
   `;
