@@ -1891,7 +1891,7 @@ const indexHtmlContent = `<!DOCTYPE html>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Custom Modern Stylesheet -->
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="./css/custom.css">
 </head>
 <body id="top">
   <!-- Dynamic Common Header -->
@@ -1979,9 +1979,9 @@ const indexHtmlContent = `<!DOCTYPE html>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/tools-data.js"></script>
-  <script src="/js/common.js"></script>
-  <script src="/js/home.js"></script>
+  <script src="./js/tools-data.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/home.js"></script>
 </body>
 </html>
 `;

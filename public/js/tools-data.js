@@ -7,7 +7,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Convert any image (JPG, WebP, GIF, BMP) to high-quality lossless PNG format instantly.",
     icon: "bi-filetype-png",
-    url: "/tools/image-to-png.html",
+    url: "./tools/image-to-png.html",
     badge: "Popular",
     tags: ["image", "png", "convert", "graphics", "photo"],
     featured: true
@@ -18,7 +18,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Convert PNG, WebP or other image formats into optimized JPEG/JPG with custom quality control.",
     icon: "bi-filetype-jpg",
-    url: "/tools/image-to-jpg.html",
+    url: "./tools/image-to-jpg.html",
     badge: "Popular",
     tags: ["image", "jpg", "jpeg", "convert", "photo"],
     featured: true
@@ -29,7 +29,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Resize image dimensions by pixels or percentage while preserving aspect ratio.",
     icon: "bi-arrows-angle-expand",
-    url: "/tools/image-resizer.html",
+    url: "./tools/image-resizer.html",
     badge: "Utility",
     tags: ["resize", "dimensions", "scale", "aspect ratio", "image"],
     featured: true
@@ -40,7 +40,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Reduce image file size significantly without visible quality loss right in your browser.",
     icon: "bi-file-zip",
-    url: "/tools/image-compressor.html",
+    url: "./tools/image-compressor.html",
     badge: "Essential",
     tags: ["compress", "optimize", "reduce size", "photo", "bandwidth"],
     featured: true
@@ -51,7 +51,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Crop photos and graphics with standard aspect ratio presets (1:1, 16:9, 4:3) or freeform.",
     icon: "bi-crop",
-    url: "/tools/image-cropper.html",
+    url: "./tools/image-cropper.html",
     badge: "Visual",
     tags: ["crop", "trim", "square", "cut", "photo"],
     featured: false
@@ -62,7 +62,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Turn pictures into Base64 data URI strings for embedding directly in HTML or CSS.",
     icon: "bi-code-slash",
-    url: "/tools/image-to-base64.html",
+    url: "./tools/image-to-base64.html",
     badge: "Dev",
     tags: ["base64", "data uri", "inline image", "embed", "encoder"],
     featured: false
@@ -73,7 +73,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Transform Google WebP files into universal transparent PNGs without loss of detail.",
     icon: "bi-arrow-left-right",
-    url: "/tools/webp-to-png.html",
+    url: "./tools/webp-to-png.html",
     badge: "Popular",
     tags: ["webp", "png", "convert", "google webp"],
     featured: false
@@ -84,7 +84,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Combine multiple photos into an animated GIF loop with customizable frame speed.",
     icon: "bi-filetype-gif",
-    url: "/tools/gif-maker.html",
+    url: "./tools/gif-maker.html",
     badge: "Creative",
     tags: ["gif", "animation", "frames", "loop", "meme"],
     featured: false
@@ -95,7 +95,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Generate custom QR codes for URLs, WiFi credentials, plain text, and contact cards with PNG/SVG export.",
     icon: "bi-qr-code",
-    url: "/tools/qr-code-generator.html",
+    url: "./tools/qr-code-generator.html",
     badge: "Must Have",
     tags: ["qr code", "barcode", "scan", "wifi", "link"],
     featured: true
@@ -106,7 +106,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Convert captured screenshots or photo documents into clean printable PDF files.",
     icon: "bi-filetype-pdf",
-    url: "/tools/screenshot-to-pdf.html",
+    url: "./tools/screenshot-to-pdf.html",
     badge: "Office",
     tags: ["screenshot", "pdf", "document", "print", "export"],
     featured: false
@@ -117,7 +117,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Extract the dominant colors and generate color swatches (HEX, RGB) from any uploaded photo.",
     icon: "bi-palette",
-    url: "/tools/color-extractor.html",
+    url: "./tools/color-extractor.html",
     badge: "Design",
     tags: ["color", "palette", "extract", "dominant", "hex"],
     featured: false
@@ -128,7 +128,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Rasterize vector SVG files into crisp PNG bitmaps at 1x, 2x, or 4x high-resolution scales.",
     icon: "bi-filetype-svg",
-    url: "/tools/svg-to-png.html",
+    url: "./tools/svg-to-png.html",
     badge: "Vector",
     tags: ["svg", "vector", "raster", "png", "scale"],
     featured: false
@@ -141,7 +141,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Create search-engine friendly title, description, OpenGraph, and Twitter card meta tags.",
     icon: "bi-tags",
-    url: "/tools/meta-tag-generator.html",
+    url: "./tools/meta-tag-generator.html",
     badge: "SEO",
     tags: ["meta tags", "seo", "opengraph", "twitter card", "head"],
     featured: true
@@ -152,7 +152,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Analyze keyword frequency and density percentages for 1-word, 2-word, and 3-word phrases.",
     icon: "bi-bar-chart",
-    url: "/tools/keyword-density-checker.html",
+    url: "./tools/keyword-density-checker.html",
     badge: "SEO",
     tags: ["keywords", "density", "content analysis", "frequency", "ranking"],
     featured: true
@@ -163,7 +163,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Generate compliant XML sitemaps with priority, change frequency, and last-modified dates.",
     icon: "bi-diagram-3",
-    url: "/tools/sitemap-generator.html",
+    url: "./tools/sitemap-generator.html",
     badge: "Webmaster",
     tags: ["sitemap", "xml", "googlebot", "indexing", "crawl"],
     featured: true
@@ -174,7 +174,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Build clean robots.txt files with customized crawl instructions for Googlebot, Bing, and other crawlers.",
     icon: "bi-robot",
-    url: "/tools/robots-txt-generator.html",
+    url: "./tools/robots-txt-generator.html",
     badge: "Webmaster",
     tags: ["robots.txt", "crawl", "allow", "disallow", "bot"],
     featured: false
@@ -185,7 +185,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Validate the XML syntax and structure of your sitemap to avoid crawling penalties.",
     icon: "bi-check2-circle",
-    url: "/tools/xml-sitemap-validator.html",
+    url: "./tools/xml-sitemap-validator.html",
     badge: "Validator",
     tags: ["xml", "validator", "sitemap", "syntax", "audit"],
     featured: false
@@ -196,7 +196,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Inspect how any webpage or HTML snippet renders across mobile, tablet, and desktop viewports.",
     icon: "bi-phone",
-    url: "/tools/mobile-friendly-test.html",
+    url: "./tools/mobile-friendly-test.html",
     badge: "Testing",
     tags: ["mobile", "responsive", "viewport", "iphone", "tablet"],
     featured: true
@@ -207,7 +207,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Preview how your links appear when shared on Google, Facebook, Twitter, and LinkedIn.",
     icon: "bi-share",
-    url: "/tools/open-graph-preview.html",
+    url: "./tools/open-graph-preview.html",
     badge: "Social SEO",
     tags: ["opengraph", "social preview", "facebook share", "twitter card"],
     featured: false
@@ -218,7 +218,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Generate Google rich-result JSON-LD structured data for WebApps, Articles, FAQs, and Products.",
     icon: "bi-file-earmark-code",
-    url: "/tools/schema-markup-generator.html",
+    url: "./tools/schema-markup-generator.html",
     badge: "Rich Snippets",
     tags: ["schema", "json-ld", "structured data", "rich snippets", "google"],
     featured: false
@@ -231,7 +231,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Real-time word, character, sentence, paragraph counter with estimated reading and speaking time.",
     icon: "bi-card-text",
-    url: "/tools/word-counter.html",
+    url: "./tools/word-counter.html",
     badge: "Popular",
     tags: ["word count", "character count", "reading time", "writing", "editor"],
     featured: true
@@ -242,7 +242,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Detailed character breakdown counting letters, digits, whitespace, punctuation, and byte size.",
     icon: "bi-123",
-    url: "/tools/character-counter.html",
+    url: "./tools/character-counter.html",
     badge: "Utility",
     tags: ["characters", "bytes", "letters", "digits", "length"],
     featured: false
@@ -253,7 +253,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Convert text into UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and kebab-case.",
     icon: "bi-type",
-    url: "/tools/case-converter.html",
+    url: "./tools/case-converter.html",
     badge: "Essential",
     tags: ["case", "uppercase", "lowercase", "title case", "camelcase", "slug"],
     featured: true
@@ -264,7 +264,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Instant proofreading tool detecting repeated words, double spaces, passive voice, and common typos.",
     icon: "bi-spellcheck",
-    url: "/tools/grammar-checker.html",
+    url: "./tools/grammar-checker.html",
     badge: "Writing",
     tags: ["grammar", "spell check", "proofread", "typo", "editor"],
     featured: true
@@ -275,7 +275,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Listen to any text converted to natural spoken audio using browser speech synthesis voices.",
     icon: "bi-volume-up",
-    url: "/tools/text-to-speech.html",
+    url: "./tools/text-to-speech.html",
     badge: "Audio",
     tags: ["tts", "speech", "voice", "audio", "narrator"],
     featured: true
@@ -286,7 +286,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Transcribe spoken voice directly into written text in real time using microphone recognition.",
     icon: "bi-mic",
-    url: "/tools/speech-to-text.html",
+    url: "./tools/speech-to-text.html",
     badge: "Voice",
     tags: ["speech to text", "dictate", "transcribe", "voice recognition", "mic"],
     featured: true
@@ -297,7 +297,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Encode special characters into percent-encoded query parameters or decode URLs back to raw strings.",
     icon: "bi-link-45deg",
-    url: "/tools/url-encoder-decoder.html",
+    url: "./tools/url-encoder-decoder.html",
     badge: "Dev & Web",
     tags: ["url", "encode", "decode", "uri", "percent encoding"],
     featured: false
@@ -308,7 +308,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Transform regular text into fancy unicode styles (cursive, bold, gothic, bubble, small caps) for bio/posts.",
     icon: "bi-magic",
-    url: "/tools/fancy-text-generator.html",
+    url: "./tools/fancy-text-generator.html",
     badge: "Fun",
     tags: ["fancy font", "unicode", "cursive", "instagram bio", "stylish"],
     featured: false
@@ -319,7 +319,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Generate dummy placeholder text, Lorem Ipsum paragraphs, sentences, and lists for design mockups.",
     icon: "bi-blockquote-left",
-    url: "/tools/random-text-generator.html",
+    url: "./tools/random-text-generator.html",
     badge: "Design",
     tags: ["lorem ipsum", "dummy text", "placeholder", "filler", "generator"],
     featured: false
@@ -330,7 +330,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Remove duplicate lines from text lists, sort alphabetically, and trim excess whitespace.",
     icon: "bi-filter",
-    url: "/tools/duplicate-line-remover.html",
+    url: "./tools/duplicate-line-remover.html",
     badge: "Utility",
     tags: ["duplicates", "unique", "lines", "clean", "dedupe"],
     featured: false
@@ -341,7 +341,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Compare two blocks of text side-by-side to visually highlight additions, removals, and modifications.",
     icon: "bi-intersect",
-    url: "/tools/text-diff-checker.html",
+    url: "./tools/text-diff-checker.html",
     badge: "Comparison",
     tags: ["diff", "compare", "text difference", "changes", "compare code"],
     featured: true
@@ -352,7 +352,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Search and batch-replace words or patterns with full support for case matching and Regular Expressions.",
     icon: "bi-search",
-    url: "/tools/find-and-replace.html",
+    url: "./tools/find-and-replace.html",
     badge: "Editor",
     tags: ["find", "replace", "batch", "regex", "substitute"],
     featured: false
@@ -365,7 +365,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Prettify, format, validate, and minify JSON data with exact line and column syntax error detection.",
     icon: "bi-file-earmark-code",
-    url: "/tools/json-formatter.html",
+    url: "./tools/json-formatter.html",
     badge: "Must Have",
     tags: ["json", "format", "validate", "prettify", "minify", "parser"],
     featured: true
@@ -376,7 +376,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Convert HTML markup into clean GitHub-flavored Markdown text with links, tables, and code formatting.",
     icon: "bi-markdown",
-    url: "/tools/html-to-markdown.html",
+    url: "./tools/html-to-markdown.html",
     badge: "Converter",
     tags: ["html", "markdown", "convert", "readme", "gfm"],
     featured: false
@@ -387,7 +387,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Compile Markdown text into clean semantic HTML markup with real-time preview and export.",
     icon: "bi-file-text",
-    url: "/tools/markdown-to-html.html",
+    url: "./tools/markdown-to-html.html",
     badge: "Converter",
     tags: ["markdown", "html", "render", "preview", "compile"],
     featured: false
@@ -398,7 +398,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Compress CSS stylesheets by stripping unnecessary whitespaces and comments to speed up page load.",
     icon: "bi-filetype-css",
-    url: "/tools/css-minifier.html",
+    url: "./tools/css-minifier.html",
     badge: "Speed",
     tags: ["css", "minify", "compress", "beautify", "stylesheet"],
     featured: false
@@ -409,7 +409,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Minify JS code to reduce payload size or beautify tangled scripts with proper indentation.",
     icon: "bi-filetype-js",
-    url: "/tools/javascript-minifier.html",
+    url: "./tools/javascript-minifier.html",
     badge: "Speed",
     tags: ["javascript", "js", "minify", "beautify", "clean"],
     featured: false
@@ -420,7 +420,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Format raw database queries with indented keywords (SELECT, FROM, WHERE, JOIN, GROUP BY).",
     icon: "bi-database",
-    url: "/tools/sql-formatter.html",
+    url: "./tools/sql-formatter.html",
     badge: "Database",
     tags: ["sql", "database", "format", "beautify", "query"],
     featured: true
@@ -431,7 +431,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Generate Apache .htaccess rules for 301 redirects, HTTPS enforcement, www redirects, and hotlink protection.",
     icon: "bi-server",
-    url: "/tools/htaccess-redirect-generator.html",
+    url: "./tools/htaccess-redirect-generator.html",
     badge: "DevOps",
     tags: ["htaccess", "apache", "301 redirect", "https", "rewrite"],
     featured: false
@@ -442,7 +442,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Pick colors and instantly convert between HEX, RGB, HSL, HSV, and CMYK formats with shades generator.",
     icon: "bi-eyedropper",
-    url: "/tools/color-code-picker.html",
+    url: "./tools/color-code-picker.html",
     badge: "Design",
     tags: ["color picker", "hex", "rgb", "hsl", "palette"],
     featured: true
@@ -453,7 +453,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Encode plain text to Base64 or decode Base64 strings back to UTF-8 text safely.",
     icon: "bi-shield-check",
-    url: "/tools/base64-encoder-decoder.html",
+    url: "./tools/base64-encoder-decoder.html",
     badge: "Encoding",
     tags: ["base64", "encode", "decode", "ascii", "utf8"],
     featured: true
@@ -464,7 +464,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Generate cryptographically secure random UUID v4 / GUID identifiers individually or in bulk.",
     icon: "bi-fingerprint",
-    url: "/tools/uuid-generator.html",
+    url: "./tools/uuid-generator.html",
     badge: "Identity",
     tags: ["uuid", "guid", "v4", "unique id", "crypto"],
     featured: false
@@ -475,7 +475,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Inspect and decode JSON Web Tokens (Header, Payload, Claims) safely in the client browser.",
     icon: "bi-key",
-    url: "/tools/jwt-decoder.html",
+    url: "./tools/jwt-decoder.html",
     badge: "Security",
     tags: ["jwt", "token", "decode", "auth", "claims", "bearer"],
     featured: true
@@ -486,7 +486,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Test RegEx patterns against text strings with real-time match highlighting and capture group details.",
     icon: "bi-regex",
-    url: "/tools/regex-tester.html",
+    url: "./tools/regex-tester.html",
     badge: "Dev",
     tags: ["regex", "regular expression", "pattern", "match", "tester"],
     featured: true
@@ -497,7 +497,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Convert Unix epoch timestamps (seconds/milliseconds) to human-readable dates and vice versa.",
     icon: "bi-clock-history",
-    url: "/tools/timestamp-converter.html",
+    url: "./tools/timestamp-converter.html",
     badge: "Time",
     tags: ["timestamp", "epoch", "unix", "date converter", "gmt"],
     featured: false
@@ -510,7 +510,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate percentage discounts, what percent X is of Y, and percentage increase or decrease.",
     icon: "bi-percent",
-    url: "/tools/percentage-calculator.html",
+    url: "./tools/percentage-calculator.html",
     badge: "Popular",
     tags: ["percentage", "percent", "math", "increase", "decrease"],
     featured: true
@@ -521,7 +521,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Compute exact age in years, months, days, total hours, minutes, and count down to next birthday.",
     icon: "bi-calendar-event",
-    url: "/tools/age-calculator.html",
+    url: "./tools/age-calculator.html",
     badge: "Popular",
     tags: ["age", "birthday", "date of birth", "calculator", "countdown"],
     featured: true
@@ -532,7 +532,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate Body Mass Index (BMI) using metric or imperial units with health classification gauge.",
     icon: "bi-heart-pulse",
-    url: "/tools/bmi-calculator.html",
+    url: "./tools/bmi-calculator.html",
     badge: "Health",
     tags: ["bmi", "body mass index", "health", "weight", "fitness"],
     featured: true
@@ -543,7 +543,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate monthly loan EMI payments, total interest payable, and full loan amortization schedule.",
     icon: "bi-cash-coin",
-    url: "/tools/loan-emi-calculator.html",
+    url: "./tools/loan-emi-calculator.html",
     badge: "Finance",
     tags: ["loan", "emi", "mortgage", "interest", "finance", "amortization"],
     featured: true
@@ -554,7 +554,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Online calculator with trigonometric functions (sin, cos, tan), log, powers, square roots, and constants.",
     icon: "bi-calculator",
-    url: "/tools/scientific-calculator.html",
+    url: "./tools/scientific-calculator.html",
     badge: "Math",
     tags: ["calculator", "scientific", "trig", "log", "math", "pi"],
     featured: true
@@ -565,7 +565,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Find your final shopping price after promotional discounts and sales tax with savings breakdown.",
     icon: "bi-tag",
-    url: "/tools/discount-calculator.html",
+    url: "./tools/discount-calculator.html",
     badge: "Shopping",
     tags: ["discount", "sale", "tax", "savings", "shopping"],
     featured: false
@@ -576,7 +576,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Convert between major world currencies (USD, EUR, GBP, JPY, CAD, AUD, INR) with live rates.",
     icon: "bi-currency-exchange",
-    url: "/tools/currency-converter.html",
+    url: "./tools/currency-converter.html",
     badge: "Finance",
     tags: ["currency", "exchange rate", "forex", "money", "usd", "eur"],
     featured: true
@@ -587,7 +587,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Compare local times across global time zones (UTC, New York, London, Tokyo, Sydney, Dubai).",
     icon: "bi-globe",
-    url: "/tools/time-zone-converter.html",
+    url: "./tools/time-zone-converter.html",
     badge: "World",
     tags: ["timezone", "time converter", "world clock", "gmt", "utc"],
     featured: false
@@ -598,7 +598,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Instant bidirectional converter between Binary, Decimal, Hexadecimal, and Octal number systems.",
     icon: "bi-binary",
-    url: "/tools/binary-to-decimal.html",
+    url: "./tools/binary-to-decimal.html",
     badge: "Math/CS",
     tags: ["binary", "decimal", "hex", "octal", "base conversion"],
     featured: false
@@ -609,7 +609,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Project investment growth over time with customizable compounding frequencies and contributions.",
     icon: "bi-graph-up-arrow",
-    url: "/tools/compound-interest-calculator.html",
+    url: "./tools/compound-interest-calculator.html",
     badge: "Investment",
     tags: ["compound interest", "investment", "growth", "savings", "apy"],
     featured: false
@@ -620,7 +620,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Quickly calculate restaurant tip percentages and split the total bill evenly among friends.",
     icon: "bi-receipt",
-    url: "/tools/tip-calculator.html",
+    url: "./tools/tip-calculator.html",
     badge: "Daily",
     tags: ["tip", "bill split", "restaurant", "dining", "gratuity"],
     featured: false
@@ -631,7 +631,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate semester grade point average (GPA) from letter grades and credit hours.",
     icon: "bi-mortarboard",
-    url: "/tools/gpa-calculator.html",
+    url: "./tools/gpa-calculator.html",
     badge: "Academic",
     tags: ["gpa", "grade", "college", "school", "credit hours"],
     featured: false
@@ -644,7 +644,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert distance and length between meters, kilometers, centimeters, feet, inches, miles, and yards.",
     icon: "bi-rulers",
-    url: "/tools/length-converter.html",
+    url: "./tools/length-converter.html",
     badge: "Units",
     tags: ["length", "distance", "meters", "feet", "inches", "miles"],
     featured: true
@@ -655,7 +655,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert weights between kilograms, grams, milligrams, pounds, ounces, and stones.",
     icon: "bi-speedometer2",
-    url: "/tools/weight-converter.html",
+    url: "./tools/weight-converter.html",
     badge: "Units",
     tags: ["weight", "mass", "kg", "lbs", "pounds", "grams", "ounces"],
     featured: true
@@ -666,7 +666,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert velocity between kilometers per hour (km/h), miles per hour (mph), m/s, and knots.",
     icon: "bi-lightning-charge",
-    url: "/tools/speed-converter.html",
+    url: "./tools/speed-converter.html",
     badge: "Units",
     tags: ["speed", "velocity", "mph", "kph", "knots", "mach"],
     featured: false
@@ -677,7 +677,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert thermal measurements between Celsius, Fahrenheit, Kelvin, and Rankine scales.",
     icon: "bi-thermometer-half",
-    url: "/tools/temperature-converter.html",
+    url: "./tools/temperature-converter.html",
     badge: "Units",
     tags: ["temperature", "celsius", "fahrenheit", "kelvin"],
     featured: true
@@ -688,7 +688,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert liquid and dry volumes between liters, milliliters, gallons, quarts, pints, and fluid ounces.",
     icon: "bi-cup-straw",
-    url: "/tools/volume-converter.html",
+    url: "./tools/volume-converter.html",
     badge: "Units",
     tags: ["volume", "liters", "gallons", "milliliters", "cups"],
     featured: false
@@ -699,7 +699,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert computer memory between Bytes, Kilobytes (KB), Megabytes (MB), Gigabytes (GB), and Terabytes (TB).",
     icon: "bi-hdd",
-    url: "/tools/data-storage-converter.html",
+    url: "./tools/data-storage-converter.html",
     badge: "Tech",
     tags: ["data", "storage", "bytes", "megabytes", "gigabytes", "terabytes"],
     featured: true
@@ -710,7 +710,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert work and energy between Joules, Kilojoules, Calories, Kilocalories, Watt-hours, and BTUs.",
     icon: "bi-battery-charging",
-    url: "/tools/energy-converter.html",
+    url: "./tools/energy-converter.html",
     badge: "Physics",
     tags: ["energy", "joules", "calories", "kwh", "btu"],
     featured: false
@@ -721,7 +721,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert pressure units between Pascals, Bar, PSI (pounds/sq inch), and standard Atmospheres.",
     icon: "bi-gauge",
-    url: "/tools/pressure-converter.html",
+    url: "./tools/pressure-converter.html",
     badge: "Engineering",
     tags: ["pressure", "psi", "bar", "pascal", "atmosphere"],
     featured: false
@@ -732,7 +732,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert automobile fuel economy between Miles Per Gallon (MPG US / UK), L/100km, and km/L.",
     icon: "bi-fuel-pump",
-    url: "/tools/fuel-efficiency-converter.html",
+    url: "./tools/fuel-efficiency-converter.html",
     badge: "Auto",
     tags: ["fuel", "mpg", "liters per 100km", "mileage", "efficiency"],
     featured: false
@@ -743,7 +743,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert geometric angles between Degrees, Radians, Gradians, Arcminutes, and Arcseconds.",
     icon: "bi-compass",
-    url: "/tools/angle-converter.html",
+    url: "./tools/angle-converter.html",
     badge: "Math",
     tags: ["angle", "degrees", "radians", "gradians", "geometry"],
     featured: false
@@ -754,7 +754,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert power ratings between Watts, Kilowatts, Metric Horsepower, and BTUs per hour.",
     icon: "bi-plug",
-    url: "/tools/power-converter.html",
+    url: "./tools/power-converter.html",
     badge: "Physics",
     tags: ["power", "watts", "horsepower", "kilowatts"],
     featured: false
@@ -765,7 +765,7 @@ window.TOOLS_CATALOG = [
     category: "Unit Converters",
     description: "Convert frequency intervals between Hertz (Hz), Kilohertz (kHz), Megahertz (MHz), Gigahertz (GHz), and RPM.",
     icon: "bi-soundwave",
-    url: "/tools/frequency-converter.html",
+    url: "./tools/frequency-converter.html",
     badge: "Wave",
     tags: ["frequency", "hertz", "khz", "mhz", "ghz", "rpm"],
     featured: false
@@ -778,7 +778,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Generate 128-bit cryptographic MD5 checksum hashes for strings and sensitive verification.",
     icon: "bi-hash",
-    url: "/tools/md5-hash-generator.html",
+    url: "./tools/md5-hash-generator.html",
     badge: "Crypt",
     tags: ["md5", "hash", "checksum", "security", "digest"],
     featured: true
@@ -789,7 +789,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Compute secure SHA-256 and SHA-512 cryptographic digests using native Web Crypto API.",
     icon: "bi-shield-lock",
-    url: "/tools/sha256-hash-generator.html",
+    url: "./tools/sha256-hash-generator.html",
     badge: "Crypto",
     tags: ["sha256", "sha512", "hash", "crypto", "subtlecrypto"],
     featured: true
@@ -800,7 +800,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Generate strong, high-entropy passwords with custom length, symbols, digits, and strength meter.",
     icon: "bi-key-fill",
-    url: "/tools/password-generator.html",
+    url: "./tools/password-generator.html",
     badge: "Must Have",
     tags: ["password", "generator", "security", "random", "passcode"],
     featured: true
@@ -811,7 +811,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Generate bulk random alphanumeric strings, API tokens, session keys, and hex strings.",
     icon: "bi-shuffle",
-    url: "/tools/random-string-generator.html",
+    url: "./tools/random-string-generator.html",
     badge: "Utility",
     tags: ["random string", "token", "api key", "session", "generator"],
     featured: false
@@ -822,7 +822,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Inspect domain HTTPS status, TLS encryption level, and recommended security header configurations.",
     icon: "bi-shield-shaded",
-    url: "/tools/ssl-certificate-checker.html",
+    url: "./tools/ssl-certificate-checker.html",
     badge: "Security",
     tags: ["ssl", "tls", "https", "certificate", "security audit"],
     featured: false
@@ -833,7 +833,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Generate customized GDPR and CCPA compliant Privacy Policy documents for your website or app.",
     icon: "bi-file-earmark-lock",
-    url: "/tools/privacy-policy-generator.html",
+    url: "./tools/privacy-policy-generator.html",
     badge: "Legal",
     tags: ["privacy policy", "gdpr", "ccpa", "legal", "terms"],
     featured: true
@@ -844,7 +844,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Create standard Terms of Service (ToS) agreement text customized to your company and website.",
     icon: "bi-file-earmark-check",
-    url: "/tools/terms-of-service-generator.html",
+    url: "./tools/terms-of-service-generator.html",
     badge: "Legal",
     tags: ["terms of service", "terms", "tos", "conditions", "contract"],
     featured: false
@@ -855,7 +855,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Translate text to Morse code and play sound beeps with Web Audio oscillator synthesis.",
     icon: "bi-broadcast-pin",
-    url: "/tools/morse-code-converter.html",
+    url: "./tools/morse-code-converter.html",
     badge: "Fun & Audio",
     tags: ["morse code", "telegraph", "dots", "dashes", "sound"],
     featured: false
@@ -866,7 +866,7 @@ window.TOOLS_CATALOG = [
     category: "Security & Encryption",
     description: "Encode or crack shift cipher messages with rot-1 to rot-25 rotation slider and brute force solver.",
     icon: "bi-arrow-repeat",
-    url: "/tools/caesar-cipher.html",
+    url: "./tools/caesar-cipher.html",
     badge: "Crypto",
     tags: ["caesar cipher", "rot13", "encryption", "cipher", "decoder"],
     featured: false
@@ -879,7 +879,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Extract and download Maximum Resolution (HD 1080p/720p) thumbnails from any YouTube video URL.",
     icon: "bi-youtube",
-    url: "/tools/youtube-thumbnail-downloader.html",
+    url: "./tools/youtube-thumbnail-downloader.html",
     badge: "Popular",
     tags: ["youtube", "thumbnail", "download", "cover image", "video"],
     featured: true
@@ -890,7 +890,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Generate viral niche hashtags for Instagram reels, TikTok, Twitter/X, and LinkedIn posts.",
     icon: "bi-hash",
-    url: "/tools/hashtag-generator.html",
+    url: "./tools/hashtag-generator.html",
     badge: "Viral",
     tags: ["hashtags", "instagram", "tiktok", "twitter", "tags", "reach"],
     featured: true
@@ -901,7 +901,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Format social posts with clean Unicode bullet lists, italic/bold styling, and character counter limits.",
     icon: "bi-chat-quote",
-    url: "/tools/social-media-post-generator.html",
+    url: "./tools/social-media-post-generator.html",
     badge: "Formatting",
     tags: ["social post", "linkedin", "formatting", "post generator", "preview"],
     featured: false
@@ -912,7 +912,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Search and copy emojis across Smileys, People, Animals, Food, Flags, and Symbols with 1-click copy.",
     icon: "bi-emoji-smile",
-    url: "/tools/emoji-keyboard.html",
+    url: "./tools/emoji-keyboard.html",
     badge: "Fun",
     tags: ["emoji", "smileys", "keyboard", "symbols", "copy emoji"],
     featured: true
@@ -923,7 +923,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Live 280-character limit counter with circular progress indicator and automatic thread split generator.",
     icon: "bi-twitter-x",
-    url: "/tools/twitter-character-counter.html",
+    url: "./tools/twitter-character-counter.html",
     badge: "X / Twitter",
     tags: ["twitter", "x", "character counter", "280", "thread splitter"],
     featured: true
@@ -934,7 +934,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Create clean line breaks for Instagram captions and bios without clumsy dots or collapsed paragraphs.",
     icon: "bi-instagram",
-    url: "/tools/instagram-caption-spacer.html",
+    url: "./tools/instagram-caption-spacer.html",
     badge: "Instagram",
     tags: ["instagram", "caption", "line break", "spacer", "clean bio"],
     featured: false
@@ -945,7 +945,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Generate Google Analytics trackable campaign links with utm_source, utm_medium, and utm_campaign.",
     icon: "bi-bullseye",
-    url: "/tools/utm-builder.html",
+    url: "./tools/utm-builder.html",
     badge: "Marketing",
     tags: ["utm", "campaign", "tracking", "google analytics", "marketing"],
     featured: true
@@ -956,7 +956,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Generate and export printable Code 128 barcodes with custom dimensions and text caption labels.",
     icon: "bi-upc-scan",
-    url: "/tools/barcode-generator.html",
+    url: "./tools/barcode-generator.html",
     badge: "Inventory",
     tags: ["barcode", "code 128", "upc", "retail", "scan", "product"],
     featured: false
@@ -967,7 +967,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Invert all colors in photos or graphics to create a negative film effect in real-time.",
     icon: "bi-circle-half",
-    url: "/tools/image-color-inverter.html",
+    url: "./tools/image-color-inverter.html",
     badge: "Filter",
     tags: ["invert", "colors", "negative", "photo filter"],
     featured: false
@@ -978,7 +978,7 @@ window.TOOLS_CATALOG = [
     category: "Image Tools",
     description: "Flip pictures horizontally or vertically to mirror photos without quality loss.",
     icon: "bi-symmetry-vertical",
-    url: "/tools/image-flipper.html",
+    url: "./tools/image-flipper.html",
     badge: "Visual",
     tags: ["flip", "mirror", "horizontal", "vertical", "rotate"],
     featured: false
@@ -989,7 +989,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Interactive directory and debugger for HTTP response codes (200, 301, 302, 400, 404, 500, 503).",
     icon: "bi-hdd-network",
-    url: "/tools/http-status-checker.html",
+    url: "./tools/http-status-checker.html",
     badge: "Webmaster",
     tags: ["http status", "seo", "redirect", "404", "500", "server response"],
     featured: false
@@ -1000,7 +1000,7 @@ window.TOOLS_CATALOG = [
     category: "SEO Tools",
     description: "Generate self-referencing and cross-domain rel=canonical tags to avoid SEO duplicate content.",
     icon: "bi-link",
-    url: "/tools/canonical-tag-generator.html",
+    url: "./tools/canonical-tag-generator.html",
     badge: "SEO",
     tags: ["canonical", "duplicate content", "seo link", "head tag"],
     featured: false
@@ -1011,7 +1011,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Convert blog titles and headlines into clean, URL-friendly, SEO-optimized kebab-case slugs.",
     icon: "bi-link-45deg",
-    url: "/tools/slug-generator.html",
+    url: "./tools/slug-generator.html",
     badge: "SEO",
     tags: ["slug", "url slug", "kebab case", "permalink", "clean url"],
     featured: true
@@ -1022,7 +1022,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Convert plain text characters to 8-bit binary codes (01100001) and decode binary back to ASCII.",
     icon: "bi-binary",
-    url: "/tools/text-to-binary.html",
+    url: "./tools/text-to-binary.html",
     badge: "Binary",
     tags: ["binary", "ascii", "text to binary", "bits", "bytes"],
     featured: false
@@ -1033,7 +1033,7 @@ window.TOOLS_CATALOG = [
     category: "Text Tools",
     description: "Generate structured dummy Markdown documents with headings, lists, tables, and blockquotes.",
     icon: "bi-markdown",
-    url: "/tools/lorem-markdown-generator.html",
+    url: "./tools/lorem-markdown-generator.html",
     badge: "Docs",
     tags: ["markdown", "dummy", "lorem", "mock", "content"],
     featured: false
@@ -1044,7 +1044,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Format, indent, validate, and minify XML data with syntax error detection.",
     icon: "bi-filetype-xml",
-    url: "/tools/xml-formatter.html",
+    url: "./tools/xml-formatter.html",
     badge: "XML",
     tags: ["xml", "formatter", "beautify", "validate", "indent"],
     featured: false
@@ -1055,7 +1055,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Convert comma-separated CSV spreadsheet data into structured JSON arrays and objects.",
     icon: "bi-filetype-csv",
-    url: "/tools/csv-to-json.html",
+    url: "./tools/csv-to-json.html",
     badge: "Data",
     tags: ["csv", "json", "convert", "spreadsheet", "table"],
     featured: true
@@ -1066,7 +1066,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Convert JSON arrays into flat CSV tabular data ready for Excel or Google Sheets.",
     icon: "bi-table",
-    url: "/tools/json-to-csv.html",
+    url: "./tools/json-to-csv.html",
     badge: "Data",
     tags: ["json", "csv", "export", "excel", "sheets"],
     featured: true
@@ -1077,7 +1077,7 @@ window.TOOLS_CATALOG = [
     category: "Developer Tools",
     description: "Encode reserved characters into HTML character entities (&amp;, &lt;, &gt;) and decode entities back.",
     icon: "bi-code",
-    url: "/tools/html-entity-encoder.html",
+    url: "./tools/html-entity-encoder.html",
     badge: "Encoding",
     tags: ["html entities", "encode", "decode", "amp", "special chars"],
     featured: false
@@ -1088,7 +1088,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate sales tax amounts, net prices, and total gross costs with custom tax rates.",
     icon: "bi-cash-stack",
-    url: "/tools/sales-tax-calculator.html",
+    url: "./tools/sales-tax-calculator.html",
     badge: "Finance",
     tags: ["sales tax", "tax", "vat", "gross", "net", "pricing"],
     featured: false
@@ -1099,7 +1099,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Convert fractions (e.g. 3/4) into decimal numbers (0.75) and percentages with mixed number support.",
     icon: "bi-slash-circle",
-    url: "/tools/fraction-to-decimal.html",
+    url: "./tools/fraction-to-decimal.html",
     badge: "Math",
     tags: ["fraction", "decimal", "math", "percent", "numerator"],
     featured: false
@@ -1110,7 +1110,7 @@ window.TOOLS_CATALOG = [
     category: "Math & Calculators",
     description: "Calculate proportional display resolutions for 16:9, 4:3, 21:9, and custom video/photo ratios.",
     icon: "bi-aspect-ratio",
-    url: "/tools/aspect-ratio-calculator.html",
+    url: "./tools/aspect-ratio-calculator.html",
     badge: "Display",
     tags: ["aspect ratio", "16:9", "resolution", "screen", "dimensions"],
     featured: false
@@ -1121,7 +1121,7 @@ window.TOOLS_CATALOG = [
     category: "Social Media Tools",
     description: "Generate high-converting professional LinkedIn headlines using proven high-impact career formulas.",
     icon: "bi-linkedin",
-    url: "/tools/linkedin-headline-generator.html",
+    url: "./tools/linkedin-headline-generator.html",
     badge: "Career",
     tags: ["linkedin", "headline", "bio", "career", "personal brand"],
     featured: false

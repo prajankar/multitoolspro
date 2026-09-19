@@ -30,12 +30,31 @@
         if (selector === '#header-placeholder' || el.querySelector('#navbarMain')) {
           initHeader();
         }
+        if (selector === '#footer-placeholder' || el.querySelector('footer')) {
+          initFooter();
+        }
       } else {
         console.warn(`Could not load ${filePath}`);
       }
     } catch (err) {
       console.warn(`Error loading component ${filePath}:`, err);
     }
+  }
+
+  // Adjust relative links inside header/footer if on a tool sub-page
+  function fixRelativeLinksInContainer(container) {
+    if (!container) return;
+    const isToolPage = window.location.pathname.includes('/tools/');
+    if (!isToolPage) return;
+
+    container.querySelectorAll('a[href]').forEach(a => {
+      const href = a.getAttribute('href');
+      if (href && (href.startsWith('./index.html') || href.startsWith('index.html'))) {
+        a.setAttribute('href', '../' + href.replace(/^\.\//, ''));
+      } else if (href && href.startsWith('./tools/')) {
+        a.setAttribute('href', href.replace('./tools/', './'));
+      }
+    });
   }
 
   // --- Theme Management ---
@@ -197,6 +216,9 @@
 
   // --- Header Initialization ---
   function initHeader() {
+    const headerContainer = document.getElementById('header-placeholder') || document.getElementById('siteHeader');
+    fixRelativeLinksInContainer(headerContainer);
+
     // Theme toggle buttons
     const toggleBtn = document.getElementById('theme-toggle-btn');
     const mobileToggleBtn = document.getElementById('mobile-theme-btn');
@@ -212,6 +234,12 @@
 
     // Global Search Modal setup
     initGlobalSearchModal();
+  }
+
+  // --- Footer Initialization ---
+  function initFooter() {
+    const footerContainer = document.getElementById('footer-placeholder') || document.querySelector('footer');
+    fixRelativeLinksInContainer(footerContainer);
   }
 
   // --- Global Search Modal Logic ---
@@ -255,7 +283,10 @@
       const isToolPage = window.location.pathname.includes('/tools/');
 
       resultsList.innerHTML = filtered.map((t, idx) => {
-        const targetUrl = isToolPage ? t.url.replace('/tools/', './') : t.url;
+        const rawUrl = t.url || '';
+        const targetUrl = isToolPage 
+          ? (rawUrl.includes('/tools/') ? './' + rawUrl.split('/tools/')[1] : rawUrl)
+          : rawUrl;
         return `
           <a href="${targetUrl}" class="search-result-item ${idx === 0 ? 'active' : ''}" data-index="${idx}">
             <div class="tool-icon-wrapper mb-0" style="width: 36px; height: 36px; font-size: 1.1rem; border-radius: 8px;">
