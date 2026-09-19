@@ -1,6 +1,6 @@
 <!-- MultiTools Pro Header Component -->
-<header class="sticky-top bg-body border-bottom shadow-sm">
-  <nav class="navbar navbar-expand-lg navbar-light bg-body py-2">
+<header class="sticky-top bg-body border-bottom shadow-sm" id="siteHeader" style="top: 0; z-index: 1030;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-body py-2" id="mainNavbar">
     <div class="container-xl">
       <!-- Brand Logo -->
       <a class="navbar-brand" href="/index.html" id="nav-brand-link">
@@ -74,26 +74,26 @@
       </div>
     </div>
   </nav>
+</header>
 
-  <!-- Top Leaderboard Ad Space (Google AdSense 728x90 Banner) -->
-  <div class="bg-body-tertiary border-top py-2 d-none d-md-block" id="header-ad-banner">
-    <div class="container-xl text-center">
-      <div class="ad-slot-container ad-leaderboard mx-auto py-1 px-3 my-0">
-        <div class="d-flex justify-content-between w-100 align-items-center mb-1">
-          <span class="ad-label text-uppercase small text-muted">Sponsored Advertisement</span>
-          <a href="#" class="text-muted text-decoration-none small" style="font-size: 0.65rem;" onclick="event.preventDefault(); document.getElementById('header-ad-banner').style.display='none';">Dismiss</a>
-        </div>
-        <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="ad-banner-content text-decoration-none w-100">
-          <div class="d-flex align-items-center justify-content-center gap-3 py-1">
-            <span class="badge bg-primary px-2 py-1"><i class="bi bi-cloud-check me-1"></i> Cloud Hosting</span>
-            <span class="fw-semibold text-body small">Deploy high-performance web applications with automated scaling & security.</span>
-            <span class="btn btn-sm btn-primary rounded-pill px-3 py-1 ms-2" style="font-size: 0.75rem;">Get Started Free <i class="bi bi-arrow-right ms-1"></i></span>
-          </div>
-        </a>
+<!-- Top Leaderboard Ad Space (Google AdSense 728x90 Banner) -->
+<div class="bg-body-tertiary border-bottom py-2 d-none d-md-block" id="header-ad-banner">
+  <div class="container-xl text-center">
+    <div class="ad-slot-container ad-leaderboard mx-auto py-1 px-3 my-0">
+      <div class="d-flex justify-content-between w-100 align-items-center mb-1">
+        <span class="ad-label text-uppercase small text-muted">Sponsored Advertisement</span>
+        <a href="#" class="text-muted text-decoration-none small" style="font-size: 0.65rem;" onclick="event.preventDefault(); document.getElementById('header-ad-banner').style.display='none';">Dismiss</a>
       </div>
+      <a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" class="ad-banner-content text-decoration-none w-100">
+        <div class="d-flex align-items-center justify-content-center gap-3 py-1">
+          <span class="badge bg-primary px-2 py-1"><i class="bi bi-cloud-check me-1"></i> Cloud Hosting</span>
+          <span class="fw-semibold text-body small">Deploy high-performance web applications with automated scaling & security.</span>
+          <span class="btn btn-sm btn-primary rounded-pill px-3 py-1 ms-2" style="font-size: 0.75rem;">Get Started Free <i class="bi bi-arrow-right ms-1"></i></span>
+        </div>
+      </a>
     </div>
   </div>
-</header>
+</div>
 
 <!-- Global Search Modal (Available on every page via Ctrl+K or search button) -->
 <div class="modal fade" id="globalSearchModal" tabindex="-1" aria-labelledby="globalSearchModalLabel" aria-hidden="true">

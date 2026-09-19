@@ -1,5 +1,6 @@
 /* MultiTools Pro - Custom Styling */
 :root {
+  --navbar-height: 56px;
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;
   --primary-light: #eff6ff;
@@ -146,7 +147,7 @@ main {
 
 /* Category Sections */
 .category-section {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 75px;
   margin-bottom: 2.5rem;
 }
 
@@ -167,6 +168,22 @@ main {
   gap: 0.5rem;
 }
 
+/* Sticky Category Filter Navigation Bar */
+.sticky-category-nav {
+  position: sticky;
+  top: 56px;
+  top: var(--navbar-height, 56px);
+  z-index: 1025;
+  background-color: var(--card-bg) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--card-border);
+}
+
+[data-bs-theme="dark"] .sticky-category-nav {
+  background-color: var(--card-bg) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
 /* Category Filter Pills */
 .category-nav-scroll {
   display: flex;
@@ -174,6 +191,24 @@ main {
   overflow-x: auto;
   padding: 0.5rem 0;
   scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-nav-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.category-nav-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.category-nav-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+.category-nav-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.7);
 }
 
 .category-pill-btn {

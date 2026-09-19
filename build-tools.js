@@ -1906,44 +1906,6 @@ const indexHtmlContent = `<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- Sticky Category Navigation Filter Bar -->
-  <div class="sticky-top bg-body border-bottom py-2 shadow-xs" style="top: 56px; z-index: 1020;">
-    <div class="container-xl">
-      <div class="category-nav-scroll">
-        <a href="#" class="category-pill-btn active" data-category="all">
-          <i class="bi bi-grid-fill me-1"></i> All Tools (${tools.length})
-        </a>
-        <a href="#" class="category-pill-btn" data-category="favorites">
-          <i class="bi bi-star-fill text-warning me-1"></i> Favorites
-        </a>
-        <a href="#image-tools" class="category-pill-btn" data-category="Image Tools">
-          <i class="bi bi-image text-primary me-1"></i> Image Tools
-        </a>
-        <a href="#seo-tools" class="category-pill-btn" data-category="SEO Tools">
-          <i class="bi bi-search text-success me-1"></i> SEO Tools
-        </a>
-        <a href="#text-tools" class="category-pill-btn" data-category="Text Tools">
-          <i class="bi bi-textarea-t text-purple me-1" style="color:#8b5cf6;"></i> Text Utilities
-        </a>
-        <a href="#developer-tools" class="category-pill-btn" data-category="Developer Tools">
-          <i class="bi bi-code-square text-warning me-1"></i> Developer Tools
-        </a>
-        <a href="#math-calculators" class="category-pill-btn" data-category="Math & Calculators">
-          <i class="bi bi-calculator text-danger me-1"></i> Calculators
-        </a>
-        <a href="#unit-converters" class="category-pill-btn" data-category="Unit Converters">
-          <i class="bi bi-arrow-left-right text-info me-1"></i> Unit Converters
-        </a>
-        <a href="#security-encryption" class="category-pill-btn" data-category="Security & Encryption">
-          <i class="bi bi-shield-lock text-danger me-1"></i> Security & Crypt
-        </a>
-        <a href="#social-media-tools" class="category-pill-btn" data-category="Social Media Tools">
-          <i class="bi bi-share text-orange me-1" style="color:#f97316;"></i> Social Media
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- Main Tools Section -->
   <main class="py-4">
     <div class="container-xl">

@@ -207,6 +207,9 @@
     // Favorites counter
     updateFavoritesUI();
 
+    // Measure sticky navbar
+    updateNavbarHeight();
+
     // Global Search Modal setup
     initGlobalSearchModal();
   }
@@ -316,6 +319,20 @@
     });
   }
 
+  // --- Dynamic Sticky Measurement for Navbar & Category Nav ---
+  function updateNavbarHeight() {
+    const header = document.querySelector('header.sticky-top') || document.querySelector('.navbar.sticky-top') || document.querySelector('.navbar');
+    if (header) {
+      const height = header.offsetHeight;
+      if (height > 0) {
+        document.documentElement.style.setProperty('--navbar-height', height + 'px');
+      }
+    }
+  }
+
+  window.addEventListener('resize', updateNavbarHeight);
+  window.addEventListener('orientationchange', updateNavbarHeight);
+
   // --- Keyboard Shortcut (Ctrl+K / Cmd+K) ---
   document.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
@@ -342,6 +359,7 @@
 
   onReady(() => {
     initTheme();
+    updateNavbarHeight();
     loadComponent('#header-placeholder', 'components/header.html');
     loadComponent('#footer-placeholder', 'components/footer.html');
     recordCurrentTool();
